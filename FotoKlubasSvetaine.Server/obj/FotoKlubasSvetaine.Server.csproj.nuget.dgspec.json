@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasSvetaine\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj": {}
+    "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasSvetaine\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj": {
+    "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasSvetaine\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj",
         "projectName": "FotoKlubasSvetaine.Server",
-        "projectPath": "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasSvetaine\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasSvetaine\\FotoKlubasSvetaine.Server\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Projects\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
