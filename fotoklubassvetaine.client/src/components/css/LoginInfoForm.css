@@ -1,0 +1,19 @@
+.login-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+}
+
+    .login-info-container h2 {
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    .login-info-container p {
+        color: black;
+        margin: 10px 0;
+        font-size: 18px;
+    }

@@ -2,7 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
-        node: true,
+        node: true, // Ensure Node environment is specified
     },
     extends: [
         'eslint:recommended',
@@ -10,17 +10,14 @@ module.exports = {
         'plugin:node/recommended',
     ],
     parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
-        ecmaVersion: 12,
+        ecmaVersion: 12, // Ensure ECMAScript 12 or later
         sourceType: 'module',
     },
-    plugins: [
-        'react',
-        'node',
-    ],
     rules: {
-        // your custom rules
+        'no-process-exit': 'error', // Ensure this rule is enforced
+        'node/no-unpublished-import': ['error', {
+            allowModules: ['vite', '@vitejs/plugin-react']
+        }],
+        // Your custom rules
     },
 };

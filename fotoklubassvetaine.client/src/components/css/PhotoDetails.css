@@ -1,0 +1,20 @@
+/* PhotoDetails.css */
+.photo-details-container {
+    text-align: center;
+    margin: 20px;
+}
+
+    .photo-details-container img {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .photo-details-container h2 {
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .photo-details-container p {
+        color: black;
+    }
