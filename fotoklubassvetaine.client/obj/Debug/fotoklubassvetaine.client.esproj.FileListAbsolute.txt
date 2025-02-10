@@ -1,1 +1,5 @@
 C:\Users\User\Desktop\Projects\FotoKlubasSvetaine\fotoklubassvetaine.client\obj\Debug\fotoklubassvetaine.client.esproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Projects\FotoKlubasV2\fotoklubassvetaine.client\obj\Debug\fotoklubassvetaine.client.esproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mok\Projects\FotoKlubasV2\fotoklubassvetaine.client\obj\Debug\fotoklubassvetaine.client.esproj.CoreCompileInputs.cache
+C:\Users\98 LP\Desktop\fotonewst\FotoKlubasV2\fotoklubassvetaine.client\obj\Debug\fotoklubassvetaine.client.esproj.CoreCompileInputs.cache
+C:\Users\98 LP\Desktop\Fotoklubas su themes\FotoKlubasV2\fotoklubassvetaine.client\obj\Debug\fotoklubassvetaine.client.esproj.CoreCompileInputs.cache

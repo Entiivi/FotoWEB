@@ -1,57 +1,64 @@
-.upload-photo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
-.upload-warning {
-    margin-bottom: 20px;
-    color: red;
+/* Labels for inputs */
+label {
+    color: black;
     font-weight: bold;
 }
 
-.input-container {
-    margin-bottom: 15px;
-    width: 100%;
+h2 {
+    color: black;
+    font-weight: bold;
 }
 
-    .input-container label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
 
-    .input-container input[type="text"],
-    .input-container input[type="file"] {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
+/* Choose File button text */
+input[type="file"] {
+    color: black; /* For file input text color */
+}
+
+/* Styling for the upload container */
+.upload-photo-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.upload-warning {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
 
 .photo-preview {
+    text-align: center;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    background-color: #eee;
     margin-top: 20px;
 }
-
-    .photo-preview img {
-        max-width: 100%;
-        height: auto;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        background-color: #f9f9f9;
-    }
-
-button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-}
-
-    button:hover {
-        background-color: #0056b3;
-    }

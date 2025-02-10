@@ -32,6 +32,16 @@ const LoginForm = ({ onLogin }) => {
         }
     };
 
+    const handleGoogleLogin = () => {
+        // Redirect to your backend Google login endpoint
+        window.location.href = 'https://localhost:7295/login/google'; // Update with your backend's Google login URL
+    };
+
+    const handleGitHubLogin = () => {
+        // Redirect to your backend GitHub login endpoint
+        window.location.href = 'https://localhost:7295/login/github'; // Update with your backend's GitHub login URL
+    };
+
     return (
         <div className="login-form-wrapper">
             <div className="login-form-container">
@@ -47,9 +57,19 @@ const LoginForm = ({ onLogin }) => {
                     </div>
                     <div className="button-container">
                         <button type="submit">Login</button>
-                        <button type="button" className="create-account" onClick={() => navigate('/create-account')}>Create an account</button>
+                        <button type="button" className="create-account" onClick={() => navigate('/create-account')}>
+                            Create an account
+                        </button>
                     </div>
                 </form>
+                <div className="google-login-container">
+                    <button onClick={handleGoogleLogin} className="google-login-button">
+                        Login with Google
+                    </button>
+                </div>
+                <button onClick={handleGitHubLogin} className="github-login-button">
+                    Login with GitHub
+                </button>
             </div>
         </div>
     );

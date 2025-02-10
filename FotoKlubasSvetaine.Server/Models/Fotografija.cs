@@ -10,6 +10,6 @@ namespace FotoKlubasSvetaine.Server.Models
         public Narys Narys { get; set; }
         public int KlubasID { get; set; }
         public Klubas Klubas { get; set; }
-        public byte[] FotoData { get; set; }
+        public string FotoPath { get; set; }
     }
 }

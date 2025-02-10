@@ -1,39 +1,32 @@
-using Microsoft.AspNetCore.Mvc;
 using FotoKlubasSvetaine.Server.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using FotoKlubasSvetaine.Server.Models;
 using Microsoft.EntityFrameworkCore;
 
-[Route("user")]
-[ApiController]
-public class UserController : ControllerBase
+public static class UserEndpoints
 {
-    private readonly ApplicationDbContext _context;
-
-    public UserController(ApplicationDbContext context)
+    public static void MapUserEndpoints(this IEndpointRouteBuilder endpoints)
     {
-        _context = context;
-    }
-
-    [HttpGet("userinfo")]
-    public async Task<IActionResult> GetUserInfo(string username)
-    {
-        var user = await _context.Narys.FirstOrDefaultAsync(u => u.Username == username);
-        if (user == null)
+        // Get user info
+        endpoints.MapGet("/user/userinfo", async (string username, ApplicationDbContext context) =>
         {
-            return NotFound();
-        }
+            var user = await context.Narys.FirstOrDefaultAsync(u => u.Username == username);
+            if (user == null)
+            {
+                return Results.NotFound(new { Message = "User not found" });
+            }
+            return Results.Ok(user);
+        })
+        .WithTags("User") // Group in Swagger under "User"
+        .WithName("GetUserInfo"); // Operation ID for Swagger
 
-        return Ok(user);
+        // Create user account
+        endpoints.MapPost("/user/create", async (Narys newNarys, ApplicationDbContext context) =>
+        {
+            context.Narys.Add(newNarys);
+            await context.SaveChangesAsync();
+            return Results.Ok(new { Message = "Account created successfully." });
+        })
+        .WithTags("User")
+        .WithName("CreateAccount"); // Operation ID for Swagger
     }
-
-    [HttpPost("create")]
-    public async Task<IActionResult> CreateAccount(Narys newNarys)
-    {
-        _context.Narys.Add(newNarys);
-        await _context.SaveChangesAsync();
-        return Ok("Account created successfully.");
-    }
-
 }

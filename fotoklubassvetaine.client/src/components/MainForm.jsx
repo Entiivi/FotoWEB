@@ -39,7 +39,7 @@ function MainForm() {
                 {photos.map(photo => (
                     <img
                         key={photo.fotoID}
-                        src={`data:image/jpeg;base64,${photo.fotoData}`}
+                        src={`https://localhost:7295/${photo.fotoPath}`}
                         alt={photo.pavadinimas}
                         onClick={() => handlePhotoClick(photo)}
                     />

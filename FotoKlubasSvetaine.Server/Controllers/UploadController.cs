@@ -1,51 +1,64 @@
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using FotoKlubasSvetaine.Server.Data;
 using FotoKlubasSvetaine.Server.Models;
-using System;
-using System.IO;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Mvc;
 
-namespace FotoKlubasSvetaine.Server.Controllers
+public static class UploadEndpoints
 {
-    [Route("upload")]
-    [ApiController]
-    public class UploadController : ControllerBase
+    public static void MapUploadEndpoints(this IEndpointRouteBuilder endpoints)
     {
-        private readonly ApplicationDbContext _context;
-
-        public UploadController(ApplicationDbContext context)
+        endpoints.MapPost("/upload", async (
+            [FromForm] IFormFile photo,
+            [FromForm] string pavadinimas,
+            [FromForm] string aprasymas,
+            [FromForm] int narysID,
+            [FromForm] int klubasID,
+            IWebHostEnvironment env,
+            ApplicationDbContext context,
+            [FromServices] IAntiforgery antiforgery,
+            HttpContext httpContext) =>
         {
-            _context = context;
-        }
+            // Validate the anti-forgery token
+            await antiforgery.ValidateRequestAsync(httpContext);
 
-        [HttpPost]
-        public async Task<IActionResult> Upload([FromForm] IFormFile photo, [FromForm] string pavadinimas, [FromForm] string aprasymas, [FromForm] int narysID, [FromForm] int klubasID)
-        {
             if (photo == null || photo.Length == 0)
             {
-                return BadRequest("No file uploaded.");
+                return Results.BadRequest(new { Message = "No file uploaded." });
             }
 
-            using var memoryStream = new MemoryStream();
-            await photo.CopyToAsync(memoryStream);
-            var fotoData = memoryStream.ToArray();
+            if (!photo.ContentType.Equals("image/jpeg", StringComparison.OrdinalIgnoreCase))
+            {
+                return Results.BadRequest(new { Message = "Only .jpg files are allowed." });
+            }
+
+            var uploadsFolderPath = Path.Combine(env.ContentRootPath, "Nuotraukos");
+            if (!Directory.Exists(uploadsFolderPath))
+            {
+                Directory.CreateDirectory(uploadsFolderPath);
+            }
+
+            var fileName = $"{Guid.NewGuid()}_{Path.GetFileName(photo.FileName)}";
+            var filePath = Path.Combine(uploadsFolderPath, fileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await photo.CopyToAsync(fileStream);
+            }
 
             var fotografija = new Fotografija
             {
                 Pavadinimas = pavadinimas,
                 Aprasymas = aprasymas,
-                Data = DateTime.UtcNow,
                 NarysID = narysID,
                 KlubasID = klubasID,
-                FotoData = fotoData
+                FotoPath = $"Nuotraukos/{fileName}",
+                Data = DateTime.UtcNow
             };
 
-            _context.Fotografija.Add(fotografija);
-            await _context.SaveChangesAsync();
+            context.Fotografija.Add(fotografija);
+            await context.SaveChangesAsync();
 
-            return Ok("Photo uploaded successfully.");
-        }
+            return Results.Ok(new { Message = "Photo uploaded successfully.", Path = fotografija.FotoPath });
+        });
     }
 }

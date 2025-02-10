@@ -4,11 +4,11 @@ import './css/PhotoDetails.css';
 
 const PhotoDetails = () => {
     const location = useLocation();
-    const { fotoData, pavadinimas, aprasymas } = location.state || {};
+    const { fotoPath, pavadinimas, aprasymas } = location.state || {};
 
     return (
         <div className="photo-details-container">
-            <img src={`data:image/jpeg;base64,${fotoData}`} alt={pavadinimas} />
+            <img src={`https://localhost:7295/${fotoPath}`} alt={pavadinimas} />
             <h2>{pavadinimas}</h2>
             <p>{aprasymas}</p>
         </div>

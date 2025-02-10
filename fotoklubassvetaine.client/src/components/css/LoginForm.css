@@ -63,3 +63,40 @@ body, html {
     .button-container button[type="submit"] {
         background-color: #28a745; /* Sets the background color for the 'Login' button */
     }
+
+.google-login-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.google-login-button {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .google-login-button:hover {
+        background-color: #357ae8;
+    }
+
+.github-login-button {
+    background-color: #333; /* GitHub's dark color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    .github-login-button:hover {
+        background-color: #24292e; /* Darker shade for hover */
+    }
+
+

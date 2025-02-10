@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|c:\\users\\98 lp\\desktop\\fotoklubas su themes\\fotoklubasv2\\fotoklubassvetaine.client\\src\\components\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|solutionrelative:fotoklubassvetaine.client\\src\\components\\css\\chatbot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B2859A9-3857-4EF7-826C-CC0229AF2F3A}|FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj|c:\\users\\98 lp\\desktop\\fotoklubas su themes\\fotoklubasv2\\fotoklubassvetaine.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B2859A9-3857-4EF7-826C-CC0229AF2F3A}|FotoKlubasSvetaine.Server\\FotoKlubasSvetaine.Server.csproj|solutionrelative:fotoklubassvetaine.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|c:\\users\\98 lp\\desktop\\fotoklubas su themes\\fotoklubasv2\\fotoklubassvetaine.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|solutionrelative:fotoklubassvetaine.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|c:\\users\\98 lp\\desktop\\fotoklubas su themes\\fotoklubasv2\\fotoklubassvetaine.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|solutionrelative:fotoklubassvetaine.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|c:\\users\\98 lp\\desktop\\fotoklubas su themes\\fotoklubasv2\\fotoklubassvetaine.client\\src\\components\\chatbot.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{7794C4DE-B24E-4894-BF4E-6C9028956C25}|fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj|solutionrelative:fotoklubassvetaine.client\\src\\components\\chatbot.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatBot.css",
+              "DocumentMoniker": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\components\\css\\ChatBot.css",
+              "RelativeDocumentMoniker": "fotoklubassvetaine.client\\src\\components\\css\\ChatBot.css",
+              "ToolTip": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\components\\css\\ChatBot.css",
+              "RelativeToolTip": "fotoklubassvetaine.client\\src\\components\\css\\ChatBot.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-10T17:14:23.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChatBot.jsx",
+              "DocumentMoniker": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\components\\ChatBot.jsx",
+              "RelativeDocumentMoniker": "fotoklubassvetaine.client\\src\\components\\ChatBot.jsx",
+              "ToolTip": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\components\\ChatBot.jsx",
+              "RelativeToolTip": "fotoklubassvetaine.client\\src\\components\\ChatBot.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-10T17:13:44.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "fotoklubassvetaine.client\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\App.jsx",
+              "RelativeToolTip": "fotoklubassvetaine.client\\src\\App.jsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-12-16T00:20:27.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\index.css",
+              "RelativeDocumentMoniker": "fotoklubassvetaine.client\\src\\index.css",
+              "ToolTip": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\fotoklubassvetaine.client\\src\\index.css",
+              "RelativeToolTip": "fotoklubassvetaine.client\\src\\index.css",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAiwEkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-10T16:55:09.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "FotoKlubasSvetaine.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\appsettings.json",
+              "RelativeToolTip": "FotoKlubasSvetaine.Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T23:27:32.687Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
