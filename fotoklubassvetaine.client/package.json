@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "dotnet watch run --project FotoKlubasSvetaine.Server",
-    "client": "npm start --prefix ClientApp"
+    "client": "npm run dev"
   },
   "dependencies": {
     "@babel/preset-env": "^7.24.7",
@@ -19,7 +19,11 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "@mui/material": "^5.x.x",
+    "@mui/icons-material": "^5.x.x",
+    "@emotion/react": "^11.x.x",
+    "@emotion/styled": "^11.x.x"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

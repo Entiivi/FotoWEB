@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\98 LP\\Desktop\\Fotoklubas su themes\\FotoKlubasV2\\FotoKlubasSvetaine.Server\\..\\fotoklubassvetaine.client",
+"WorkingDirectory": "C:\\Users\\User\\Desktop\\FotoWEB\\FotoKlubasSvetaine.Server\\..\\fotoklubassvetaine.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
