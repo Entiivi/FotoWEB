@@ -1,20 +1,65 @@
 ﻿@page "/login"
 @inject HttpClient Http
+@inject NavigationManager Navigation
+@using Microsoft.Fast.Components.FluentUI
 
-<h3>🔑 Login</h3>
+<link rel="stylesheet" href="css/login.css" />
 
-<FluentTextField @bind-Value="email" Label="Email" />
-<FluentTextField @bind-Value="password" Label="Password" Type="password" />
+<div class="login-container">
+    <div class="login-content">
+        <!-- Quote Section -->
+        <div class="quote-section">
+            <p>"Photography is the story I fail to put into words." – Destin Sparks</p>
+        </div>
 
-<FluentButton Appearance="Accent" OnClick="Login">Login</FluentButton>
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Login</h2>
+
+            <FluentTextField @bind-value="username" Placeholder="Enter Username" Style="width: 100%;" />
+            <FluentTextField @bind-value="password" Placeholder="Enter Password" Type="password" Style="width: 100%;" />
+
+            <FluentButton Appearance="Appearance.Accent" OnClick="LoginUser" Style="width: 100%; margin-top: 15px;">Login</FluentButton>
+
+            <div class="create-account">
+                <a href="/create-account">Create an account</a>
+            </div>
+
+            <FluentDivider />
+
+            <div class="social-buttons">
+                <FluentButton Appearance="Appearance.Neutral" OnClick="LoginWithGoogle" class="google-login">
+                    Login with Google
+                </FluentButton>
+
+                <FluentButton Appearance="Appearance.Neutral" OnClick="LoginWithGitHub" class="github-login">
+                    Login with GitHub
+                </FluentButton>
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
-    private string email;
-    private string password;
+    private string username = "";
+    private string password = "";
 
-    private async Task Login()
+    private async Task LoginUser()
     {
-        var credentials = new { Email = email, Password = password };
-        await Http.PostAsJsonAsync("https://api.yourdomain.com/api/login", credentials);
+        var credentials = new { Username = username, Password = password };
+        var response = await Http.PostAsJsonAsync("https://localhost:7295/login", credentials);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Login successful");
+            Navigation.NavigateTo("/main");
+        }
+        else
+        {
+            Console.WriteLine("Login failed");
+        }
     }
+
+    private void LoginWithGoogle() => Navigation.NavigateTo("https://localhost:7295/login/google", forceLoad: true);
+    private void LoginWithGitHub() => Navigation.NavigateTo("https://localhost:7295/login/github", forceLoad: true);
 }

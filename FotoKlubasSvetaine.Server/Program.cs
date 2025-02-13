@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Antiforgery;
 using AspNet.Security.OAuth.GitHub;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Authentication (Google Login)
@@ -84,7 +85,8 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", builder =>
     {
-        builder.WithOrigins("https://localhost:5173, https://localhost:5001") // Frontend URL
+        builder.WithOrigins("https://localhost:5173", "https://localhost:5001") // Frontend URL
+               .SetIsOriginAllowed(_ => true)
                .AllowAnyHeader()
                .AllowAnyMethod()
                .AllowCredentials();
@@ -114,6 +116,9 @@ builder.Services.AddSwaggerGen(c =>
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
+builder.Logging.SetMinimumLevel(LogLevel.Information);
+builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Warning);
+
 
 builder.Services.AddAntiforgery(options =>
 {
@@ -134,27 +139,18 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.UseAuthentication();
-app.UseAuthorization();
-app.UseAntiforgery();
-
-
-// Enable HTTPS redirection
-app.UseHttpsRedirection();
-
-// Enable routing
-app.UseRouting();
-
 // Enable CORS
 app.UseCors("AllowFrontend");
-
+// Enable HTTPS redirection
+app.UseHttpsRedirection();
+// Enable routing
+app.UseRouting();
 // Enable authentication and authorization middleware
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.UseAntiforgery();
 
-
+app.MapFallbackToPage("/_Host");
 
 // Enable Swagger middleware
 app.UseSwagger();
@@ -182,7 +178,9 @@ app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(
         Path.Combine(Directory.GetCurrentDirectory(), "Nuotraukos")),
-    RequestPath = "/Nuotraukos"
+    RequestPath = "/Nuotraukos",
+    ServeUnknownFileTypes = false, 
+    DefaultContentType = "image/jpeg"
 });
 
 

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "fotoklubassvetaine.blazorclient",
   "resources": {
-    "hash": "sha256-f+WKW8Dmw+EDfifVO28IyqEFJwMHwMnWePdyD+BUdkM=",
+    "hash": "sha256-0UYythKacOt6XBKkdz2ym76Be0xMK0SQOAftI+/qOTE=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -31,19 +31,40 @@
       "Microsoft.Extensions.Configuration.Json.wasm": "sha256-CtLsl9w5UTJXGXTbp+SQxMzt9f/gjQ4EkywrtuCscvU=",
       "Microsoft.Extensions.DependencyInjection.wasm": "sha256-CS+QrPLaogl32aUg+ES1Ef5QGKoMyjt3V+wGoiG+tpw=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.wasm": "sha256-NICKEw2hjoBhl1lvxOBh8cxOIN8kkrGHz3pvV1eLLbY=",
+      "Microsoft.Extensions.Diagnostics.wasm": "sha256-MFVFI2HwI1mQqiiXvaLy8bt3VV9aPzyHpmctfcIyNc8=",
+      "Microsoft.Extensions.Diagnostics.Abstractions.wasm": "sha256-dpN/LMJr0L1oxGxMzPw+PC8Nkzf+2WG8a3ccmvA35DE=",
       "Microsoft.Extensions.FileProviders.Abstractions.wasm": "sha256-IUopixuV8E09mP+TIgRp/lXEbeacXbUTW7cu0v5B9Tc=",
       "Microsoft.Extensions.FileProviders.Physical.wasm": "sha256-MS+zB0xkKhKk/QdE32ZwKtdlrLMLI/y2NAKPUWhcBVg=",
       "Microsoft.Extensions.FileSystemGlobbing.wasm": "sha256-AnWUKd0qJ8ZNKkRC0AFK2cjjszB7reXiP+bXdIi8bic=",
-      "Microsoft.Extensions.Hosting.Abstractions.wasm": "sha256-/3hZCF7P9dCL0Y32JOYNMvKTfrO4aMqMnboqu0L/FSs=",
-      "Microsoft.Extensions.Http.wasm": "sha256-Fe3LbA/B3OyQFUA22gv3dQOE9m4fdjc2ZXV17rLywEE=",
+      "Microsoft.Extensions.Hosting.Abstractions.wasm": "sha256-aNb/fEY3laCkq3MVPJn/8u4nEDmL0cilWcVA+t9NGSE=",
+      "Microsoft.Extensions.Http.wasm": "sha256-N+Tzkk/w6KHM7RAL+KgJZSEePxW2/p5DHYG8y6zUPx0=",
       "Microsoft.Extensions.Logging.wasm": "sha256-pa0M3exxNvk6g5anUwlaPC99Afawsi1GZvJeU1q/ZGM=",
       "Microsoft.Extensions.Logging.Abstractions.wasm": "sha256-glWux6/5FFNJxVrbRPQ/PhLriEkSd3TllLfjmvZbpKw=",
       "Microsoft.Extensions.Options.wasm": "sha256-5/m+yVFGRuY+N4jQnD+QETKH0AfhAsnVze5dJ5ogIVM=",
+      "Microsoft.Extensions.Options.ConfigurationExtensions.wasm": "sha256-C8ZA1VhhrMRPf8Qqv+OrW9za3ggJkCM9i1d8R/F1ETc=",
       "Microsoft.Extensions.Primitives.wasm": "sha256-pVrYOTfjb2ITls3LKIByW1t8jwOAWFhmkIVDewtJ1GE=",
       "Microsoft.Fast.Components.FluentUI.wasm": "sha256-/eliP3ZlhFOGwRif8MWZj6X+pGMpWRlUBAybqidbiGw=",
+      "Microsoft.FluentUI.AspNetCore.Components.wasm": "sha256-NGDqzHtj3RxMJZAAufzm8Y/a/OC43RXZ18Y7Pm2iWDg=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emoji.wasm": "sha256-HPe9eJ2VA8pFYYURJwEhxjhCUS4r/E9nCy/K7boz6J4=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.Activities.wasm": "sha256-HZ8sK3w8Htr0TEBJRa7zvq9hdayQ1INnjZWRkARqfwk=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.AnimalsNature.wasm": "sha256-Of1nW7myV4mG8CP2T9aUfLFqy/2M4c+v0fpNYKOglNE=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.Flags.wasm": "sha256-a451yqiLpmeEEaqKA2z+iquaj9wr27VN3hv6IrzQKAc=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.FoodDrink.wasm": "sha256-ntmVgO8S/CvoPk+OXgsBk+iU6AiuAiImm9QMUUUJ+MI=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.Objects.wasm": "sha256-SvALTF71yMZ644kjge24CELUkWXy6JOL3zgNpPQDZ40=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.PeopleBody.wasm": "sha256-ZJe9O1iRzZHC2XxrKg+PZo4wZUSpJ4fma2ygsK5KpUQ=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.SmileysEmotion.wasm": "sha256-JJ+xee67twNBjFmyjKgaDfpxQYomMKuflbI5189BtuY=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.Symbols.wasm": "sha256-u/ps5c0okMYTtkAVlxyL4iuQzqfoFMJ0I82JJLri9as=",
+      "Microsoft.FluentUI.AspNetCore.Components.Emojis.TravelPlaces.wasm": "sha256-DdwRz/asbomiWIyTPNN5giIKCArTPExuul0kXncQSyk=",
+      "Microsoft.FluentUI.AspNetCore.Components.Icons.Color.wasm": "sha256-5Yro414ZUATTk1+uevH45swlkt3k2GzDIajGtF3KjSM=",
+      "Microsoft.FluentUI.AspNetCore.Components.Icons.Filled.wasm": "sha256-3D964K8ey7snQdbe56Up62TNbmPcVD0pNv3v3Lv7hmY=",
+      "Microsoft.FluentUI.AspNetCore.Components.Icons.Light.wasm": "sha256-tFSwVSTi8+zI8vpRJyCtBF6OKaGEGNPebzv4JWwVTtc=",
+      "Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.wasm": "sha256-2OM8MOORP0sXrHiOcZwEk2fIbrDpZEvr87xK/xnLDL0=",
+      "Microsoft.FluentUI.AspNetCore.Components.Icons.wasm": "sha256-8X+moJM13sz2iv43RNSbAnlgS5TmzFdq9qWS8J3rGBA=",
       "Microsoft.JSInterop.wasm": "sha256-Io6aK2hSUL4m2prTnsWGWosE7cw/c/7mj3BAxlDuDjY=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-hcEp3tuBjwv8iSHAFSZG7AZV1aZYHr9VqnSGg1D6WgI=",
+      "Radzen.Blazor.wasm": "sha256-z4zk12zB8SaRtMvm06IoYteeVRPwUDT3JzHkV9/IPYE=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
+      "System.Linq.Dynamic.Core.wasm": "sha256-/qz59wKgSagF0d38CYfES3/SNsW9U4aAvURBDYQ8Z2A=",
       "Microsoft.CSharp.wasm": "sha256-7Bfs33c7OZrbgWcIBluYbzsZ1u0obprWgsewXOKrWcA=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-zIf1NRVYv6ya13edv24tLDcAqgwzEddFDsUyvQ4zLtY=",
       "Microsoft.VisualBasic.wasm": "sha256-rdXZFs1ZHNBN3mwseUAZ5rgPN3MeTKhqI2grNAjRolQ=",
@@ -212,15 +233,17 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "fotoklubassvetaine.blazorclient.wasm": "sha256-xfotOc3p+7apafqKcmcLozJ6O/mE3wQy6iErF+ZWPos="
+      "fotoklubassvetaine.blazorclient.wasm": "sha256-ZgYE3sdQz81iRFflLll3nOCbLJLrNPCJkKUbci7tciM="
     },
     "pdb": {
-      "fotoklubassvetaine.blazorclient.pdb": "sha256-rEJBQwm5wYzUn7PSq2c3+EmCF3Efw9AFvCXheTxupEE="
+      "fotoklubassvetaine.blazorclient.pdb": "sha256-/vIkV28+O8zmsDRbDZGy4aQIS32GBgnm2qgKAD4r61I="
     },
     "libraryInitializers": {
+      "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js": "sha256-htNuF2gbem5vP85zcYVih92CTJrIeZj4ghrN/AHd9VM=",
       "_content/Microsoft.Fast.Components.FluentUI/Microsoft.Fast.Components.FluentUI.lib.module.js": "sha256-AAzIHKRoGSs08MPblq5+dyNviCAvs1xKUIeOzybjB0o="
     },
     "modulesAfterConfigLoaded": {
+      "../_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js": "sha256-htNuF2gbem5vP85zcYVih92CTJrIeZj4ghrN/AHd9VM=",
       "../_content/Microsoft.Fast.Components.FluentUI/Microsoft.Fast.Components.FluentUI.lib.module.js": "sha256-AAzIHKRoGSs08MPblq5+dyNviCAvs1xKUIeOzybjB0o="
     }
   },

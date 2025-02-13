@@ -1,22 +1,29 @@
-﻿@page "/upload"
-@inject HttpClient Http
+﻿@page "/upload" 
+@using Microsoft.Fast.Components.FluentUI
+@inject HttpClient Http  
 
-<h3>⬆️ Upload Photo</h3>
+<h3>⬆️ Upload Photo</h3>  
 
-<FluentFileUpload @bind-Value="file" />
-<FluentButton Appearance="Accent" OnClick="UploadFile">Upload</FluentButton>
+<FluentFileUpload OnFileSelected="HandleFileSelected" />  
 
-@code {
-    private IBrowserFile? file;
+<FluentButton OnClick="UploadFile">Upload</FluentButton>  
 
-    private async Task UploadFile()
-    {
-        if (file != null)
-        {
-            var formData = new MultipartFormDataContent();
-            formData.Add(new StreamContent(file.OpenReadStream()), "photo", file.Name);
+@code {  
+   private IBrowserFile? file;  
 
-            await Http.PostAsync("https://api.yourdomain.com/api/upload", formData);
-        }
-    }
+   private void HandleFileSelected(IBrowserFile selectedFile)  
+   {  
+       file = selectedFile;  
+   }  
+
+   private async Task UploadFile()  
+   {  
+       if (file != null)  
+       {  
+           var formData = new MultipartFormDataContent();  
+           formData.Add(new StreamContent(file.OpenReadStream()), "photo", file.Name);  
+
+           await Http.PostAsync("https://api.yourdomain.com/api/upload", formData);  
+       }  
+   }  
 }

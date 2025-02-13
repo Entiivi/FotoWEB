@@ -1,0 +1,61 @@
+﻿.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('/wwwroot/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.login-content {
+    display: flex;
+    width: 70%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.quote-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.login-form {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+.create-account {
+    margin-top: 10px;
+}
+
+    .create-account a {
+        color: #0078D4;
+        text-decoration: none;
+    }
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.google-login {
+    background-color: #DB4437 !important;
+    color: white !important;
+}
+
+.github-login {
+    background-color: #333 !important;
+    color: white !important;
+}

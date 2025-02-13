@@ -475,9 +475,13 @@ C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\staticw
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FotoKlubasSvetaine.Server.props
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\scopedcss\bundle\FotoKlubasSvetaine.Server.styles.css
-C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\FotoKlubasSvetaine.Server.csproj.CopyComplete
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\FotoKlubasSvetaine.Server.dll
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\refint\FotoKlubasSvetaine.Server.dll
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\FotoKlubasSvetaine.Server.pdb
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\FotoKlubasSvetaine.Server.genruntimeconfig.cache
 C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\ref\FotoKlubasSvetaine.Server.dll
+C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\bin\Debug\net8.0\FotoKlubasSvetaine.Server.staticwebassets.endpoints.json
+C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\staticwebassets\msbuild.FotoKlubasSvetaine.Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\FotoKlub.81F19714.Up2Date

@@ -1,13 +1,13 @@
 ﻿@inherits LayoutComponentBase
+@using Microsoft.Fast.Components.FluentUI
 
 <FluentDesignSystemProvider>
     <FluentCard>
-        <FluentNavMenu>
-            <FluentNavItem><FluentAnchor href="/">🏠 Home</FluentAnchor></FluentNavItem>
-            <FluentNavItem><FluentAnchor href="/photos">📷 Photos</FluentAnchor></FluentNavItem>
-            <FluentNavItem><FluentAnchor href="/upload">⬆️ Upload</FluentAnchor></FluentNavItem>
-            <FluentNavItem><FluentAnchor href="/login">🔑 Login</FluentAnchor></FluentNavItem>
-        </FluentNavMenu>
+        <FluentNav>
+            <FluentAnchor Href="/" Appearance="Appearance.Stealth">🏠 Home</FluentAnchor>
+            <FluentAnchor Href="/photos" Appearance="Appearance.Stealth">📷 Photos</FluentAnchor>
+            <FluentAnchor Href="/upload" Appearance="Appearance.Stealth">⬆️ Upload</FluentAnchor>
+        </FluentNav>
     </FluentCard>
 
     <FluentCard>
@@ -16,3 +16,8 @@
         </main>
     </FluentCard>
 </FluentDesignSystemProvider>
+<FluentToastProvider />
+<FluentDialogProvider />
+<FluentTooltipProvider />
+<FluentMessageBarProvider />
+<FluentMenuProvider />
