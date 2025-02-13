@@ -1,0 +1,20 @@
+﻿@page "/login"
+@inject HttpClient Http
+
+<h3>🔑 Login</h3>
+
+<FluentTextField @bind-Value="email" Label="Email" />
+<FluentTextField @bind-Value="password" Label="Password" Type="password" />
+
+<FluentButton Appearance="Accent" OnClick="Login">Login</FluentButton>
+
+@code {
+    private string email;
+    private string password;
+
+    private async Task Login()
+    {
+        var credentials = new { Email = email, Password = password };
+        await Http.PostAsJsonAsync("https://api.yourdomain.com/api/login", credentials);
+    }
+}

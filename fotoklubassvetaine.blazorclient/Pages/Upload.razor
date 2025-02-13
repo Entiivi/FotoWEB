@@ -1,0 +1,22 @@
+﻿@page "/upload"
+@inject HttpClient Http
+
+<h3>⬆️ Upload Photo</h3>
+
+<FluentFileUpload @bind-Value="file" />
+<FluentButton Appearance="Accent" OnClick="UploadFile">Upload</FluentButton>
+
+@code {
+    private IBrowserFile? file;
+
+    private async Task UploadFile()
+    {
+        if (file != null)
+        {
+            var formData = new MultipartFormDataContent();
+            formData.Add(new StreamContent(file.OpenReadStream()), "photo", file.Name);
+
+            await Http.PostAsync("https://api.yourdomain.com/api/upload", formData);
+        }
+    }
+}

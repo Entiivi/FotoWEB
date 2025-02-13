@@ -1,0 +1,29 @@
+﻿@page "/photo/{id}"
+@inject HttpClient Http
+
+<h3>@photoTitle</h3>
+<img src="@photoUrl" alt="@photoTitle" />
+<p>@photoDescription</p>
+
+@code {
+    [Parameter] public string Id { get; set; }
+
+    private string photoTitle;
+    private string photoUrl;
+    private string photoDescription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var photo = await Http.GetFromJsonAsync<Photo>($"https://api.yourdomain.com/api/photos/{Id}");
+        photoTitle = photo.Title;
+        photoUrl = photo.Url;
+        photoDescription = photo.Description;
+    }
+
+    private class Photo
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public string Description { get; set; }
+    }
+}

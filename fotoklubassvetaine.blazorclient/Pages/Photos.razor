@@ -1,0 +1,29 @@
+﻿@page "/photos"
+@inject HttpClient Http
+
+<h3>📷 Photo Gallery</h3>
+
+@if (photos == null)
+{
+    <FluentProgressRing></FluentProgressRing>
+}
+else
+{
+    <FluentGrid>
+        @foreach (var photo in photos)
+        {
+            <FluentCard>
+                <img src="@photo" style="width: 100%; border-radius: 10px;" />
+            </FluentCard>
+        }
+    </FluentGrid>
+}
+
+@code {
+    private List<string>? photos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        photos = await Http.GetFromJsonAsync<List<string>>("https://api.yourdomain.com/api/photos");
+    }
+}

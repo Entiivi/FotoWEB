@@ -1,16 +1,18 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+<FluentDesignSystemProvider>
+    <FluentCard>
+        <FluentNavMenu>
+            <FluentNavItem><FluentAnchor href="/">🏠 Home</FluentAnchor></FluentNavItem>
+            <FluentNavItem><FluentAnchor href="/photos">📷 Photos</FluentAnchor></FluentNavItem>
+            <FluentNavItem><FluentAnchor href="/upload">⬆️ Upload</FluentAnchor></FluentNavItem>
+            <FluentNavItem><FluentAnchor href="/login">🔑 Login</FluentAnchor></FluentNavItem>
+        </FluentNavMenu>
+    </FluentCard>
 
-        <article class="content px-4">
+    <FluentCard>
+        <main>
             @Body
-        </article>
-    </main>
-</div>
+        </main>
+    </FluentCard>
+</FluentDesignSystemProvider>

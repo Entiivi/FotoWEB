@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FotoKlubasSvetaine.Server",
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "fotoklubassvetaine.client", "fotoklubassvetaine.client\fotoklubassvetaine.client.esproj", "{7794C4DE-B24E-4894-BF4E-6C9028956C25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fotoklubassvetaine.blazorclient", "fotoklubassvetaine.blazorclient\fotoklubassvetaine.blazorclient.csproj", "{14A40124-1754-47F8-BA7B-3E2C89068CD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fotoklubassvetaine.blazorclient", "fotoklubassvetaine.blazorclient\fotoklubassvetaine.blazorclient.csproj", "{14A40124-1754-47F8-BA7B-3E2C89068CD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
