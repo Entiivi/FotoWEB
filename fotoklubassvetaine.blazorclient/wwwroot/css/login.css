@@ -1,9 +1,22 @@
-﻿.login-container {
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.login-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url('/wwwroot/background.jpg') no-repeat center center;
+    background: url('/images/logindivimage.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -11,8 +24,8 @@
     display: flex;
     width: 70%;
     max-width: 1000px;
-    background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
+    background-color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     overflow: hidden;
 }
@@ -23,7 +36,6 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 1.2rem;
     text-align: center;

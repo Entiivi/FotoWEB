@@ -1,14 +1,18 @@
 ﻿@inherits LayoutComponentBase
 @using Microsoft.Fast.Components.FluentUI
+@inject NavigationManager Navigation
 
 <FluentDesignSystemProvider>
-    <FluentCard>
-        <FluentNav>
-            <FluentAnchor Href="/" Appearance="Appearance.Stealth">🏠 Home</FluentAnchor>
-            <FluentAnchor Href="/photos" Appearance="Appearance.Stealth">📷 Photos</FluentAnchor>
-            <FluentAnchor Href="/upload" Appearance="Appearance.Stealth">⬆️ Upload</FluentAnchor>
-        </FluentNav>
-    </FluentCard>
+    @if (!Navigation.Uri.Contains("/login"))
+    {
+        <FluentCard>
+            <FluentNav>
+                <FluentAnchor Href="/" Appearance="Appearance.Stealth">🏠 Home</FluentAnchor>
+                <FluentAnchor Href="/photos" Appearance="Appearance.Stealth">📷 Photos</FluentAnchor>
+                <FluentAnchor Href="/upload" Appearance="Appearance.Stealth">⬆️ Upload</FluentAnchor>
+            </FluentNav>
+        </FluentCard>
+    }
 
     <FluentCard>
         <main>

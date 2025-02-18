@@ -1154,6 +1154,6 @@ C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\f
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\refint\fotoklubassvetaine.blazorclient.dll
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.pdb
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\ref\fotoklubassvetaine.blazorclient.dll
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-yxuny6l6ie.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-i076cidjx0.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-g6aqbsa4ip.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-shrc8odyyn.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-zablm0t2bs.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-v6218jhdsn.gz

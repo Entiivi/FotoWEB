@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y8jZJaEsYZEeG1J+k50GhxArCZBUqm+azwEeDj4UYOE=",
+  "Hash": "ezPeKnKxhu4NtNhri6rYhu2xhw7XtHZdrDwJ55d8TLo=",
   "Source": "fotoklubassvetaine.blazorclient",
   "BasePath": "/",
   "Mode": "Root",
@@ -7276,8 +7276,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "g6aqbsa4ip",
-      "Integrity": "+M4zQbj5mB7n5KsBonn7hoCdDhthcPWu/vd5sAnOl3M=",
+      "Fingerprint": "v6218jhdsn",
+      "Integrity": "qboWcjQWtSaYuZGKA2jxBMKi58P6wYPiDxUeMRxplwc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -7465,8 +7465,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "i076cidjx0",
-      "Integrity": "/vIkV28+O8zmsDRbDZGy4aQIS32GBgnm2qgKAD4r61I=",
+      "Fingerprint": "zablm0t2bs",
+      "Integrity": "ha3QJEYN2ufeFqdou35XW2+8iiR5pHtoeqCMqS1kqT4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\fotoklubassvetaine.blazorclient.pdb"
@@ -7486,8 +7486,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "yxuny6l6ie",
-      "Integrity": "ZgYE3sdQz81iRFflLll3nOCbLJLrNPCJkKUbci7tciM=",
+      "Fingerprint": "shrc8odyyn",
+      "Integrity": "MM5L3v3OFHx0d2FtDJePseYEofjLeLDdfDeGYpPkiJs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\webcil\\fotoklubassvetaine.blazorclient.wasm"
@@ -12554,7 +12554,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.FluentUI.AspNetCore.Components.Emojis.TravelPlaces.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\3mta9hn2m5-g6aqbsa4ip.gz",
+      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\3mta9hn2m5-v6218jhdsn.gz",
       "SourceId": "fotoklubassvetaine.blazorclient",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\",
@@ -12568,8 +12568,8 @@
       "RelatedAsset": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "v2erbqh72z",
-      "Integrity": "B+MDCzXpFDxcA2cQIGDPyKuqh259cbEjrp62VDI4T1Q=",
+      "Fingerprint": "dftkv0vhr1",
+      "Integrity": "B3+Sc58mc4WHzkBCYCQlJGlfx4p7gFCe87GNYoDyB5g=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -16355,7 +16355,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Threading.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\v7mpprcxo9-yxuny6l6ie.gz",
+      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\v7mpprcxo9-shrc8odyyn.gz",
       "SourceId": "fotoklubassvetaine.blazorclient",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\",
@@ -16369,8 +16369,8 @@
       "RelatedAsset": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\fotoklubassvetaine.blazorclient.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "thq9fsaegi",
-      "Integrity": "YW23EExCk7sM0NsK4maqjPM2MXJFmTMbT7Qt4IV/kXY=",
+      "Fingerprint": "rgwmgbi6eg",
+      "Integrity": "JfY9LEvHmTmnoP65Mruwm/pgBDHJ7ONZV5fssrsyw18=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\fotoklubassvetaine.blazorclient.wasm"
@@ -16838,7 +16838,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Memory.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\zj4v8f5cla-i076cidjx0.gz",
+      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\zj4v8f5cla-zablm0t2bs.gz",
       "SourceId": "fotoklubassvetaine.blazorclient",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\",
@@ -16852,8 +16852,8 @@
       "RelatedAsset": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\fotoklubassvetaine.blazorclient.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "l4atnht3ua",
-      "Integrity": "hcOcILQYTHJHApJ+f6GXYqyoUz4XVw9HX4MgqiEg6gM=",
+      "Fingerprint": "yi40xqc6b5",
+      "Integrity": "6r/70b5Cez4HIhXOfat82Gf1PrbQceAvGrI8Lnxogis=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\fotoklubassvetaine.blazorclient.pdb"
@@ -16999,11 +16999,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t2rtgpzbyu",
-      "Integrity": "q82whWb0XWT79fYFeLJ0adpzogoZNVn/c9a6cTOrTFQ=",
+      "Fingerprint": "pjg0ed6fri",
+      "Integrity": "O2rL1yhLFl/ByUz1QlFTPs/y5uN/uK9vN8mtbg+Q+oM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\login.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
+      "SourceId": "fotoklubassvetaine.blazorclient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyjx89twm7",
+      "Integrity": "u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\favicon.png",
@@ -17048,6 +17069,27 @@
       "OriginalItemSpec": "wwwroot\\icon-192.png"
     },
     {
+      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\logindivimage.jpg",
+      "SourceId": "fotoklubassvetaine.blazorclient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/logindivimage#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "85txe930wt",
+      "Integrity": "zNMfkDQdOoMtTGQekSgjLNPhXfG5X1Nq8IGH9AdyEpc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logindivimage.jpg"
+    },
+    {
       "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\index.html",
       "SourceId": "fotoklubassvetaine.blazorclient",
       "SourceType": "Discovered",
@@ -17062,8 +17104,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ycridehpz3",
-      "Integrity": "AtDCViQ1OB5o9/+u1bSGVzVxUaQYJ6zVhJdRmbhgDMU=",
+      "Fingerprint": "mhh5zx3774",
+      "Integrity": "yv4r5FPD7/8pi9uhUdeNoswbRoio6k0JGmOnslNRBkc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -31750,11 +31792,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+M4zQbj5mB7n5KsBonn7hoCdDhthcPWu/vd5sAnOl3M=\""
+          "Value": "\"qboWcjQWtSaYuZGKA2jxBMKi58P6wYPiDxUeMRxplwc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:42:13 GMT"
+          "Value": "Fri, 14 Feb 2025 09:02:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -31764,13 +31806,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+M4zQbj5mB7n5KsBonn7hoCdDhthcPWu/vd5sAnOl3M="
+          "Value": "sha256-qboWcjQWtSaYuZGKA2jxBMKi58P6wYPiDxUeMRxplwc="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\3mta9hn2m5-g6aqbsa4ip.gz",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\3mta9hn2m5-v6218jhdsn.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -31789,11 +31831,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"B+MDCzXpFDxcA2cQIGDPyKuqh259cbEjrp62VDI4T1Q=\""
+          "Value": "\"B3+Sc58mc4WHzkBCYCQlJGlfx4p7gFCe87GNYoDyB5g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:40:20 GMT"
+          "Value": "Fri, 14 Feb 2025 09:02:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -31813,19 +31855,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"+M4zQbj5mB7n5KsBonn7hoCdDhthcPWu/vd5sAnOl3M=\""
+          "Value": "W/\"qboWcjQWtSaYuZGKA2jxBMKi58P6wYPiDxUeMRxplwc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+M4zQbj5mB7n5KsBonn7hoCdDhthcPWu/vd5sAnOl3M="
+          "Value": "sha256-qboWcjQWtSaYuZGKA2jxBMKi58P6wYPiDxUeMRxplwc="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\3mta9hn2m5-g6aqbsa4ip.gz",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\3mta9hn2m5-v6218jhdsn.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -31842,11 +31884,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"B+MDCzXpFDxcA2cQIGDPyKuqh259cbEjrp62VDI4T1Q=\""
+          "Value": "\"B3+Sc58mc4WHzkBCYCQlJGlfx4p7gFCe87GNYoDyB5g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:40:20 GMT"
+          "Value": "Fri, 14 Feb 2025 09:02:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -31864,7 +31906,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-B+MDCzXpFDxcA2cQIGDPyKuqh259cbEjrp62VDI4T1Q="
+          "Value": "sha256-B3+Sc58mc4WHzkBCYCQlJGlfx4p7gFCe87GNYoDyB5g="
         }
       ]
     },
@@ -32975,7 +33017,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "29888"
+          "Value": "29896"
         },
         {
           "Name": "Content-Type",
@@ -32983,11 +33025,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/vIkV28+O8zmsDRbDZGy4aQIS32GBgnm2qgKAD4r61I=\""
+          "Value": "\"ha3QJEYN2ufeFqdou35XW2+8iiR5pHtoeqCMqS1kqT4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:42:12 GMT"
+          "Value": "Fri, 14 Feb 2025 08:55:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -32997,18 +33039,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/vIkV28+O8zmsDRbDZGy4aQIS32GBgnm2qgKAD4r61I="
+          "Value": "sha256-ha3QJEYN2ufeFqdou35XW2+8iiR5pHtoeqCMqS1kqT4="
         }
       ]
     },
     {
       "Route": "_framework/fotoklubassvetaine.blazorclient.pdb",
-      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\zj4v8f5cla-i076cidjx0.gz",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\zj4v8f5cla-zablm0t2bs.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000046000276"
+          "Quality": "0.000045610034"
         }
       ],
       "ResponseHeaders": [
@@ -33018,15 +33060,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "21738"
+          "Value": "21924"
         },
         {
           "Name": "ETag",
-          "Value": "\"hcOcILQYTHJHApJ+f6GXYqyoUz4XVw9HX4MgqiEg6gM=\""
+          "Value": "\"6r/70b5Cez4HIhXOfat82Gf1PrbQceAvGrI8Lnxogis=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:29:47 GMT"
+          "Value": "Fri, 14 Feb 2025 08:55:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -33046,19 +33088,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"/vIkV28+O8zmsDRbDZGy4aQIS32GBgnm2qgKAD4r61I=\""
+          "Value": "W/\"ha3QJEYN2ufeFqdou35XW2+8iiR5pHtoeqCMqS1kqT4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/vIkV28+O8zmsDRbDZGy4aQIS32GBgnm2qgKAD4r61I="
+          "Value": "sha256-ha3QJEYN2ufeFqdou35XW2+8iiR5pHtoeqCMqS1kqT4="
         }
       ]
     },
     {
       "Route": "_framework/fotoklubassvetaine.blazorclient.pdb.gz",
-      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\zj4v8f5cla-i076cidjx0.gz",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\zj4v8f5cla-zablm0t2bs.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -33067,7 +33109,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "21738"
+          "Value": "21924"
         },
         {
           "Name": "Content-Type",
@@ -33075,11 +33117,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hcOcILQYTHJHApJ+f6GXYqyoUz4XVw9HX4MgqiEg6gM=\""
+          "Value": "\"6r/70b5Cez4HIhXOfat82Gf1PrbQceAvGrI8Lnxogis=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:29:47 GMT"
+          "Value": "Fri, 14 Feb 2025 08:55:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -33097,7 +33139,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hcOcILQYTHJHApJ+f6GXYqyoUz4XVw9HX4MgqiEg6gM="
+          "Value": "sha256-6r/70b5Cez4HIhXOfat82Gf1PrbQceAvGrI8Lnxogis="
         }
       ]
     },
@@ -33112,7 +33154,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "28949"
+          "Value": "28437"
         },
         {
           "Name": "Content-Type",
@@ -33120,11 +33162,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZgYE3sdQz81iRFflLll3nOCbLJLrNPCJkKUbci7tciM=\""
+          "Value": "\"MM5L3v3OFHx0d2FtDJePseYEofjLeLDdfDeGYpPkiJs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:42:13 GMT"
+          "Value": "Fri, 14 Feb 2025 08:55:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -33134,18 +33176,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZgYE3sdQz81iRFflLll3nOCbLJLrNPCJkKUbci7tciM="
+          "Value": "sha256-MM5L3v3OFHx0d2FtDJePseYEofjLeLDdfDeGYpPkiJs="
         }
       ]
     },
     {
       "Route": "_framework/fotoklubassvetaine.blazorclient.wasm",
-      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\v7mpprcxo9-yxuny6l6ie.gz",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\v7mpprcxo9-shrc8odyyn.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000083801223"
+          "Quality": "0.000083049581"
         }
       ],
       "ResponseHeaders": [
@@ -33155,15 +33197,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11932"
+          "Value": "12040"
         },
         {
           "Name": "ETag",
-          "Value": "\"YW23EExCk7sM0NsK4maqjPM2MXJFmTMbT7Qt4IV/kXY=\""
+          "Value": "\"JfY9LEvHmTmnoP65Mruwm/pgBDHJ7ONZV5fssrsyw18=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:29:47 GMT"
+          "Value": "Fri, 14 Feb 2025 08:55:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -33183,19 +33225,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ZgYE3sdQz81iRFflLll3nOCbLJLrNPCJkKUbci7tciM=\""
+          "Value": "W/\"MM5L3v3OFHx0d2FtDJePseYEofjLeLDdfDeGYpPkiJs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZgYE3sdQz81iRFflLll3nOCbLJLrNPCJkKUbci7tciM="
+          "Value": "sha256-MM5L3v3OFHx0d2FtDJePseYEofjLeLDdfDeGYpPkiJs="
         }
       ]
     },
     {
       "Route": "_framework/fotoklubassvetaine.blazorclient.wasm.gz",
-      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\v7mpprcxo9-yxuny6l6ie.gz",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\compressed\\v7mpprcxo9-shrc8odyyn.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -33204,7 +33246,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11932"
+          "Value": "12040"
         },
         {
           "Name": "Content-Type",
@@ -33212,11 +33254,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YW23EExCk7sM0NsK4maqjPM2MXJFmTMbT7Qt4IV/kXY=\""
+          "Value": "\"JfY9LEvHmTmnoP65Mruwm/pgBDHJ7ONZV5fssrsyw18=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:29:47 GMT"
+          "Value": "Fri, 14 Feb 2025 08:55:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -33234,7 +33276,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YW23EExCk7sM0NsK4maqjPM2MXJFmTMbT7Qt4IV/kXY="
+          "Value": "sha256-JfY9LEvHmTmnoP65Mruwm/pgBDHJ7ONZV5fssrsyw18="
         }
       ]
     },
@@ -63361,7 +63403,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1184"
+          "Value": "1289"
         },
         {
           "Name": "Content-Type",
@@ -63369,11 +63411,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q82whWb0XWT79fYFeLJ0adpzogoZNVn/c9a6cTOrTFQ=\""
+          "Value": "\"O2rL1yhLFl/ByUz1QlFTPs/y5uN/uK9vN8mtbg+Q+oM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:40:13 GMT"
+          "Value": "Fri, 14 Feb 2025 09:02:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -63383,12 +63425,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-q82whWb0XWT79fYFeLJ0adpzogoZNVn/c9a6cTOrTFQ="
+          "Value": "sha256-O2rL1yhLFl/ByUz1QlFTPs/y5uN/uK9vN8mtbg+Q+oM="
         }
       ]
     },
     {
-      "Route": "css/login.t2rtgpzbyu.css",
+      "Route": "css/login.pjg0ed6fri.css",
       "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\login.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -63398,7 +63440,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1184"
+          "Value": "1289"
         },
         {
           "Name": "Content-Type",
@@ -63406,11 +63448,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q82whWb0XWT79fYFeLJ0adpzogoZNVn/c9a6cTOrTFQ=\""
+          "Value": "\"O2rL1yhLFl/ByUz1QlFTPs/y5uN/uK9vN8mtbg+Q+oM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:40:13 GMT"
+          "Value": "Fri, 14 Feb 2025 09:02:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -63420,7 +63462,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t2rtgpzbyu"
+          "Value": "pjg0ed6fri"
         },
         {
           "Name": "label",
@@ -63428,7 +63470,89 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-q82whWb0XWT79fYFeLJ0adpzogoZNVn/c9a6cTOrTFQ="
+          "Value": "sha256-O2rL1yhLFl/ByUz1QlFTPs/y5uN/uK9vN8mtbg+Q+oM="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Feb 2025 08:43:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.dyjx89twm7.css",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Feb 2025 08:43:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyjx89twm7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
         }
       ]
     },
@@ -63769,6 +63893,88 @@
       ]
     },
     {
+      "Route": "images/logindivimage.85txe930wt.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\logindivimage.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12113588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zNMfkDQdOoMtTGQekSgjLNPhXfG5X1Nq8IGH9AdyEpc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 May 2024 16:20:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "85txe930wt"
+        },
+        {
+          "Name": "label",
+          "Value": "images/logindivimage.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zNMfkDQdOoMtTGQekSgjLNPhXfG5X1Nq8IGH9AdyEpc="
+        }
+      ]
+    },
+    {
+      "Route": "images/logindivimage.jpg",
+      "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\logindivimage.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12113588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zNMfkDQdOoMtTGQekSgjLNPhXfG5X1Nq8IGH9AdyEpc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 May 2024 16:20:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zNMfkDQdOoMtTGQekSgjLNPhXfG5X1Nq8IGH9AdyEpc="
+        }
+      ]
+    },
+    {
       "Route": "index.html",
       "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\index.html",
       "Selectors": [],
@@ -63779,7 +63985,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1182"
+          "Value": "1236"
         },
         {
           "Name": "Content-Type",
@@ -63787,11 +63993,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AtDCViQ1OB5o9/+u1bSGVzVxUaQYJ6zVhJdRmbhgDMU=\""
+          "Value": "\"yv4r5FPD7/8pi9uhUdeNoswbRoio6k0JGmOnslNRBkc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:41:21 GMT"
+          "Value": "Fri, 14 Feb 2025 08:45:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -63801,12 +64007,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AtDCViQ1OB5o9/+u1bSGVzVxUaQYJ6zVhJdRmbhgDMU="
+          "Value": "sha256-yv4r5FPD7/8pi9uhUdeNoswbRoio6k0JGmOnslNRBkc="
         }
       ]
     },
     {
-      "Route": "index.ycridehpz3.html",
+      "Route": "index.mhh5zx3774.html",
       "AssetFile": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -63816,7 +64022,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1182"
+          "Value": "1236"
         },
         {
           "Name": "Content-Type",
@@ -63824,11 +64030,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AtDCViQ1OB5o9/+u1bSGVzVxUaQYJ6zVhJdRmbhgDMU=\""
+          "Value": "\"yv4r5FPD7/8pi9uhUdeNoswbRoio6k0JGmOnslNRBkc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 22:41:21 GMT"
+          "Value": "Fri, 14 Feb 2025 08:45:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -63838,7 +64044,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ycridehpz3"
+          "Value": "mhh5zx3774"
         },
         {
           "Name": "label",
@@ -63846,7 +64052,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-AtDCViQ1OB5o9/+u1bSGVzVxUaQYJ6zVhJdRmbhgDMU="
+          "Value": "sha256-yv4r5FPD7/8pi9uhUdeNoswbRoio6k0JGmOnslNRBkc="
         }
       ]
     },
