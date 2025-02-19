@@ -101,3 +101,19 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+
+@font-face {
+    font-family: 'DM Serif Text';
+    src: url('/fonts/DMSerifText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Serif Text';
+    src: url('/fonts/DMSerifText-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+

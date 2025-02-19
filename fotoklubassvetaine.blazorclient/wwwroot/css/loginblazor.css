@@ -1,0 +1,116 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('/images/logindivimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.login-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: rgba(198, 193, 210, 1) !important;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.2rem;
+}
+
+
+fluent-card {
+    --elevation: 0;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.login-content {
+    display: flex;
+    width: 20%;
+    max-width: 1000px;
+    border-radius: 12px;
+    height: 80vh;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background-color: rgba(44, 37, 59, 1);
+    margin-right: 13vw;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.google-login, .github-login {
+    flex: 1;
+}
+.google-login {
+    background-color: #DB4437 !important;
+    color: white !important;
+    margin-right: 5px; /* Add margin to the right of the Google button */
+}
+.github-login {
+    background-color: #333 !important;
+    color: white !important;
+    margin-left: 5px; /* Add margin to the left of the GitHub button */
+}
+
+.login-form {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 60%;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.login-form {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+.create-account {
+    margin-top: 10px;
+}
+
+    .create-account a {
+        color: #0078D4;
+        text-decoration: none;
+    }
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.google-login {
+    background-color: #DB4437 !important;
+    color: white !important;
+}
+
+.github-login {
+    background-color: #333 !important;
+    color: white !important;
+}

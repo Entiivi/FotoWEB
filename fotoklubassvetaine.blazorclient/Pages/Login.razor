@@ -3,42 +3,45 @@
 @inject NavigationManager Navigation
 @using Microsoft.Fast.Components.FluentUI
 
-<link rel="stylesheet" href="css/login.css" />
 
-<div class="login-container">
+<link rel="stylesheet" href="/css/loginblazor.css" />
+<div class="login-container1">
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+       <FluentTypography Variant="Title">
+            "Photography is the story I fail to put into words." – Destin Sparks
+        </FluentTypography>
+    </div>
+
     <div class="login-content">
-        <!-- Quote Section -->
-        <div class="quote-section">
-            <p>"Photography is the story I fail to put into words." – Destin Sparks</p>
-        </div>
-
         <!-- Login Form -->
         <div class="login-form">
-            <h2>Login</h2>
+            <pirmas Style="font-size: 4rem;">Login</pirmas>
 
             <FluentTextField @bind-value="username" Placeholder="Enter Username" Style="width: 100%;" />
             <FluentTextField @bind-value="password" Placeholder="Enter Password" Type="password" Style="width: 100%;" />
 
             <FluentButton Appearance="Appearance.Accent" OnClick="LoginUser" Style="width: 100%; margin-top: 15px;">Login</FluentButton>
+            <FluentButton Appearance="Appearance.Accent" OnClick="Createanaccount" Style="width: 100%; margin-top: 5px;">Create an account</FluentButton>
 
-            <div class="create-account">
-                <a href="/create-account">Create an account</a>
-            </div>
 
-            <FluentDivider />
 
-            <div class="social-buttons">
-                <FluentButton Appearance="Appearance.Neutral" OnClick="LoginWithGoogle" class="google-login">
+            <antras Style="margin-top: 5px;">Or login with</antras>
+
+            <div class="social-buttons" Style="margin-top: 5px;">
+                <FluentButton Appearance="Appearance.Accent" OnClick="LoginWithGoogle" class="google-login">
                     Login with Google
                 </FluentButton>
 
-                <FluentButton Appearance="Appearance.Neutral" OnClick="LoginWithGitHub" class="github-login">
+                <FluentButton Appearance="Appearance.Accent" OnClick="LoginWithGitHub" class="github-login">
                     Login with GitHub
                 </FluentButton>
             </div>
         </div>
     </div>
 </div>
+
 
 @code {
     private string username = "";
@@ -60,6 +63,9 @@
         }
     }
 
+    private void Createanaccount() => Navigation.NavigateTo("https://localhost:7295/create-account", forceLoad: true);
     private void LoginWithGoogle() => Navigation.NavigateTo("https://localhost:7295/login/google", forceLoad: true);
     private void LoginWithGitHub() => Navigation.NavigateTo("https://localhost:7295/login/github", forceLoad: true);
 }
+    
+

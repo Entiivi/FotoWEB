@@ -2,6 +2,7 @@ using fotoklubassvetaine.blazorclient;
 using Microsoft.Fast.Components.FluentUI;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.AspNetCore.SignalR.Client;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 

@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[8.0.12, )"
             },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Microsoft.Fast.Components.FluentUI": {
               "target": "Package",
               "version": "[3.8.0, )"

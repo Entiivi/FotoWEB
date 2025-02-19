@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ut9WwPI8ROlQ3VvVpPDtUjoy4IDNG41QnxVWK07My6I=",
+  "Hash": "xzQwbdd5UFtt7dTF0uv1Wm9fcbip1Gvx+RwYBqMWEYA=",
   "Source": "FotoKlubasSvetaine.Server",
   "BasePath": "_content/FotoKlubasSvetaine.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "fotoklubassvetaine.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
