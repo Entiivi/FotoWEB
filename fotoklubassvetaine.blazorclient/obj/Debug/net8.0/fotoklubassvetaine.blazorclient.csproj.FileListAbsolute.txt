@@ -1,3 +1,10 @@
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.AssemblyInfo.cs
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.sourcelink.json
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
@@ -718,13 +725,6 @@ C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\i
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\icudt_EFIGS.dat
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\icudt_no_CJK.dat
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\emcc-props.json
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.AssemblyInfoInputs.cache
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.AssemblyInfo.cs
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.sourcelink.json
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
@@ -1209,6 +1209,6 @@ C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\f
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\refint\fotoklubassvetaine.blazorclient.dll
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.pdb
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\ref\fotoklubassvetaine.blazorclient.dll
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-34k24cz31x.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-8knuobxqy4.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-fwzcx5g1ma.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-ktlldodzsq.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-cb884kcoaj.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-z20epfhetz.gz

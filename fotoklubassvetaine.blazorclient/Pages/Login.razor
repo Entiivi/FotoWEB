@@ -8,10 +8,15 @@
 <div class="login-container1">
 
     <!-- Quote Section -->
-    <div class="quote-section">
-       <FluentTypography Variant="Title">
-            "Photography is the story I fail to put into words." – Destin Sparks
-        </FluentTypography>
+    <div class="mainimage">
+        <div class="image-wrapper">
+            <img src="/images/mainimage1.jpg" alt="Inspirational Image" class="quote-image" />
+            <div class="quote-overlay">
+                <FluentTypography Variant="Title" class="quote-text">
+                    "Photography is the story I fail to put into words." – Destin Sparks
+                </FluentTypography>
+            </div>
+        </div>
     </div>
 
     <div class="login-content">
@@ -19,8 +24,8 @@
         <div class="login-form">
             <pirmas Style="font-size: 4rem;">Login</pirmas>
 
-            <FluentTextField @bind-value="username" Placeholder="Enter Username" Style="width: 100%;" />
-            <FluentTextField @bind-value="password" Placeholder="Enter Password" Type="password" Style="width: 100%;" />
+            <FluentTextField @bind-value="username" Placeholder="Enter Username" Style="width: 100%; margin-top: 8vh" />
+            <FluentTextField @bind-value="password" Placeholder="Enter Password" Type="password" Style="width: 100%; margin-top: 4vh" />
 
             <FluentButton Appearance="Appearance.Accent" OnClick="LoginUser" Style="width: 100%; margin-top: 15px;">Login</FluentButton>
             <FluentButton Appearance="Appearance.Accent" OnClick="Createanaccount" Style="width: 100%; margin-top: 5px;">Create an account</FluentButton>
@@ -31,11 +36,13 @@
 
             <div class="social-buttons" Style="margin-top: 5px;">
                 <FluentButton Appearance="Appearance.Accent" OnClick="LoginWithGoogle" class="google-login">
-                    Login with Google
+                    <img src="/images/google.svg" alt="Google Icon" style="width: 24px; height: 24px; margin-right: 5px;" />
+                    Google
                 </FluentButton>
 
                 <FluentButton Appearance="Appearance.Accent" OnClick="LoginWithGitHub" class="github-login">
-                    Login with GitHub
+                    <img src="/images/github.svg" alt="GitHub Icon" style="width: 24px; height: 24px; margin-right: 5px;" />
+                    GitHub
                 </FluentButton>
             </div>
         </div>
@@ -44,22 +51,43 @@
 
 
 @code {
-    private string username = "";
-    private string password = "";
+    @code {
+        private string username = "";
+        private string password = "";
 
-    private async Task LoginUser()
-    {
-        var credentials = new { Username = username, Password = password };
-        var response = await Http.PostAsJsonAsync("https://localhost:7295/login", credentials);
+        private async Task LoginUser()
+        {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                Console.WriteLine("Username and password are required.");
+                return;
+            }
 
-        if (response.IsSuccessStatusCode)
-        {
-            Console.WriteLine("Login successful");
-            Navigation.NavigateTo("/main");
-        }
-        else
-        {
-            Console.WriteLine("Login failed");
+            var credentials = new
+            {
+                Username = username,
+                Password = password
+            };
+
+            try
+            {
+                var response = await Http.PostAsJsonAsync("http://localhost:5027/login", credentials);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Login successful: {result}");
+                    Navigation.NavigateTo("/Main");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid username or password.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during login: {ex.Message}");
+            }
         }
     }
 

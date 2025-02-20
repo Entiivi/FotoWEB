@@ -1,0 +1,99 @@
+﻿@page "/Main"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Microsoft.Fast.Components.FluentUI
+
+<link rel="stylesheet" href="css/mainblazor.css" />
+
+<FluentCard style="display: flex; min-height: 100vh; background-color: #f5f5f5; padding: 16px; gap: 16px;">
+
+    <!-- Sidebar -->
+    <FluentCard class= "mainnav">
+        <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToUploadPhoto">Upload Photo</FluentButton>
+        <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToLoginInfo">Login Information</FluentButton>
+        <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToPersonalInfo">Personal Information</FluentButton>
+    </FluentCard>
+
+    <!-- Photo Gallery -->
+    <FluentCard style="flex-grow: 1; padding: 24px;">
+        @if (loading)
+        {
+            <FluentProgressRing />
+        }
+        else if (photos == null || photos.Count == 0)
+        {
+            <FluentTypography Variant="Body1" style="text-align: center; color: #757575;">
+                No photos available.
+            </FluentTypography>
+        }
+        else
+        {
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+                @foreach (var photo in photos)
+                {
+                    <FluentCard style="overflow: hidden; border-radius: 8px; cursor: pointer;" @onclick="() => HandlePhotoClick(photo)">
+                        <img src="@($"https://localhost:5027/Nuotraukos/{photo.FotoPath}")" alt="@photo.Pavadinimas"
+                             style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s;"
+                             onmouseover="this.style.transform='scale(1.05)'"
+                             onmouseout="this.style.transform='scale(1)'">
+                    </FluentCard>
+                }
+            </div>
+        }
+    </FluentCard>
+</FluentCard>
+
+@code {
+    private List<Photo> photos = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadPhotosAsync();
+    }
+
+    private async Task LoadPhotosAsync()
+    {
+        try
+        {
+            var response = await Http.GetAsync("fotografija"); // Relative path based on base address
+            if (response.IsSuccessStatusCode)
+            {
+                photos = await response.Content.ReadFromJsonAsync<List<Photo>>() ?? new List<Photo>();
+            }
+            else
+            {
+                Console.WriteLine($"Failed to fetch photos. Status code: {response.StatusCode}");
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            Console.WriteLine($"HTTP error: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Unexpected error: {ex.Message}");
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private void HandlePhotoClick(Photo photo)
+    {
+        Navigation.NavigateTo($"/photo-details/{photo.FotoID}");
+    }
+
+    // Navigation Methods
+    private void NavigateToUploadPhoto() => Navigation.NavigateTo("/upload-photo");
+    private void NavigateToLoginInfo() => Navigation.NavigateTo("/login-info");
+    private void NavigateToPersonalInfo() => Navigation.NavigateTo("/personal-info");
+
+    private class Photo
+    {
+        public int FotoID { get; set; }
+        public string? Pavadinimas { get; set; }
+        public string? FotoPath { get; set; }
+    }
+}

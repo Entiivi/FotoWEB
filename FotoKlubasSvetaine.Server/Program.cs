@@ -149,8 +149,9 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
+app.UseStaticFiles();
+app.MapFallbackToFile("index.html");
 
-app.MapFallbackToPage("/_Host");
 
 // Enable Swagger middleware
 app.UseSwagger();

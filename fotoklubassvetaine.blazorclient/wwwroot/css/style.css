@@ -1,2 +1,33 @@
 ﻿body {
+    background-color: rgba(44, 37, 59, 1);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+fluent-card {
+    border-radius: 0px;
+    background-color: rgba(44, 37, 59, 1) !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+fluent-button::part(control) {
+    outline: none;
+    border: none;
+    background-color: #5c4ea2;
+}
+
+fluent-button[appearance="accent"] {
+    background-color: #676278; /* Your desired accent color */
+    color: white !important;
+    outline: 0px;
+    border: 0px;
+    font-family: 'PixelifySans', sans-serif !important;
+    font-size: 1.2rem;
+    --accent-fill-rest: #5c4ea2;
+    --accent-fill-hover: #7160c9;
 }

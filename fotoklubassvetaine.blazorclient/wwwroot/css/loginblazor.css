@@ -5,15 +5,58 @@
 }
 
 body {
-    background: url('/images/logindivimage.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: rgba(44, 37, 59, 1);
 }
 
+/* Main image container */
+.mainimage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-width: 600px; /* Adjust width as needed */
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Image styling */
+.quote-image {
+    width: 100%;
+    height: 80vh;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Quote overlay (absolute positioning) */
+.quote-overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* Quote text style */
+.quote-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
 
 .login-container1 {
     display: flex;
@@ -21,7 +64,7 @@ body {
     justify-content: center;
     height: 100vh;
     color: rgba(198, 193, 210, 1) !important;
-    font-family: 'DM Serif Text', serif;
+    font-family: 'PixelifySans', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -30,15 +73,12 @@ fluent-card {
     --elevation: 0;
     background-color: transparent !important;
     border: none !important;
-    box-shadow: none !important;
 }
 .login-content {
     display: flex;
-    width: 20%;
-    max-width: 1000px;
+    width: 30vw;
     border-radius: 12px;
-    height: 80vh;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 200vh;
     overflow: hidden;
     background-color: rgba(44, 37, 59, 1);
     margin-right: 13vw;
@@ -48,6 +88,7 @@ fluent-card {
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 10vh !important;
 }
 .google-login, .github-login {
     flex: 1;
@@ -70,47 +111,73 @@ fluent-card {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 1.5rem;
 }
-
-.quote-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    width: 60%;
-    color: black;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.login-form {
-    flex: 1;
-    padding: 40px;
-    text-align: center;
-}
-
-.create-account {
-    margin-top: 10px;
-}
-
-    .create-account a {
-        color: #0078D4;
-        text-decoration: none;
-    }
 
 .social-buttons {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    font-size: 3rem !important;
 }
 
 .google-login {
     background-color: #DB4437 !important;
     color: white !important;
+    font-size: 1.2rem;
 }
 
 .github-login {
     background-color: #333 !important;
     color: white !important;
+    font-size: 1.2rem;
+}
+
+.login-form {
+    --accent-fill-rest: #5c4ea2;
+    --accent-fill-hover: #7160c9;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+fluent-text-field::part(root) {
+    outline: none;
+    border: none;
+    color: #5c4ea2;
+}
+
+fluent-text-field:focus::part(root) {
+    outline: none;
+    border: none;
+    color: #5c4ea2;
+}
+
+fluent-button::part(control) {
+    outline: none;
+    border: none;
+    background-color: #5c4ea2;
+}
+
+fluent-button[appearance="accent"] {
+    background-color: #FF5733 !important; /* Your desired accent color */
+    color: white !important;
+    outline: 0px;
+    border: 0px;
+    font-family: 'PixelifySans', sans-serif !important;
+    font-size: 1.2rem;
+}
+
+/* Custom styles for FluentTextField */
+fluent-text-field {
+    --neutral-fill-input-rest: #c6c1d2; /* Background color when idle */
+    --neutral-fill-input-hover: #c6c1d2; /* Background color on hover */
+    --neutral-fill-input-focus: #c6c1d2; /* Background color on focus */
+    --neutral-fill-input-disabled: #a3a0ad; /* Background when disabled */
+
+    --neutral-foreground-rest: white; /* Text color */
+    --neutral-foreground-hint: #c6c1d2; /* Placeholder color */
+
+    width: 100%;
+    font-family: 'PixelifySans', sans-serif !important;
+    font-size: 1.2rem;
 }

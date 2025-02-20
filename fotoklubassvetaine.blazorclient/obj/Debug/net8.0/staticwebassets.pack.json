@@ -29,8 +29,16 @@
       "PackagePath": "staticwebassets\\css\\fonts\\DMSerifText-Regular.ttf"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\fonts\\PixelifySans-Regular.ttf",
+      "PackagePath": "staticwebassets\\css\\fonts\\PixelifySans-Regular.ttf"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\loginblazor.css",
       "PackagePath": "staticwebassets\\css\\loginblazor.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\mainblazor.css",
+      "PackagePath": "staticwebassets\\css\\mainblazor.css"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
@@ -45,8 +53,24 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\github.svg",
+      "PackagePath": "staticwebassets\\images\\github.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\google.svg",
+      "PackagePath": "staticwebassets\\images\\google.svg"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\logindivimage.jpg",
       "PackagePath": "staticwebassets\\images\\logindivimage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\mainimage1.jpg",
+      "PackagePath": "staticwebassets\\images\\mainimage1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\mainimage2.JPG",
+      "PackagePath": "staticwebassets\\images\\mainimage2.JPG"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\index.html",

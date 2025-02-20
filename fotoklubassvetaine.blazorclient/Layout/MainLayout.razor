@@ -3,7 +3,7 @@
 @inject NavigationManager Navigation
 
 <FluentDesignSystemProvider>
-    @if (!Navigation.Uri.Contains("/login"))
+    @if (!Navigation.Uri.Contains("/login") && !Navigation.Uri.Contains("/Main"))
     {
         <FluentCard>
             <FluentNav>

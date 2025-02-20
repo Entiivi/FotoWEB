@@ -2,6 +2,7 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+
 h1:focus {
     outline: none;
 }
@@ -115,5 +116,12 @@ code {
     src: url('/fonts/DMSerifText-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'PixelifySans';
+    src: url('/css/fonts/PixelifySans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
