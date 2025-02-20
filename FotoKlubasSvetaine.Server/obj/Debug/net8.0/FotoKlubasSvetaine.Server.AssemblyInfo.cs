@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FotoKlubasSvetaine.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc33891c47722c62b6d3ab7ff1679f105230666d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee219d43210edbde6c93661e191cf8d2ea74d43c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FotoKlubasSvetaine.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FotoKlubasSvetaine.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
