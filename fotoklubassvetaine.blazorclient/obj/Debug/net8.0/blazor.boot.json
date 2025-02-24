@@ -1,21 +1,22 @@
 {
   "mainAssemblyName": "fotoklubassvetaine.blazorclient",
   "resources": {
-    "hash": "sha256-aJZvT6Yza6Ii+/JoCaFssqB9Md2fEXuAaUm1c+7lVk8=",
+    "hash": "sha256-A9tqelf6kP95McVT36hfXBnYQdBUWI/V1s4rLr4yQYg=",
     "jsModuleNative": {
-      "dotnet.native.8.0.10.lokhwal0n1.js": "sha256-QVxMlY7ohmjgde/bZMA0dlWDAeuUP+tEfkiSdg4DFcE="
+      "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.10.x3omf8v8xq.js": "sha256-FjrgL9dY6dc2yUoXDWowSfachSgM8O29qUMWDQOJKRI="
+      "dotnet.runtime.js": "sha256-13vqU3hueOALvSTEM8xnJkJj2exVJYtNc1KZelMCDf0="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-4ymhDbG5daKbi9yL1L574jRRiFFQhiOrDJU5YAYALU4="
+      "dotnet.native.wasm": "sha256-XhsharnkthjahGEiBkFjCLc/87/Tecti9860TIEq0H0="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
       "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
+    "coreAssembly": {},
     "assembly": {
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-MU7sWxRNN2saeKjeKjEzOcHScadiqpZSFHmm9pRAgXQ=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-b7K6lrR2/olkwgWg5icEuBtqoA6oubYSYBPNUi1p0x0=",
@@ -243,10 +244,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "fotoklubassvetaine.blazorclient.wasm": "sha256-Aw+IXjicGr2D9euIHdr3rTza77O7N+nWu2sBrGJYJaw="
+      "fotoklubassvetaine.blazorclient.wasm": "sha256-PxHcwCT9dWYOzFeHpUGUb8AmbNCNzw4t6oaBY9JgYcw="
     },
     "pdb": {
-      "fotoklubassvetaine.blazorclient.pdb": "sha256-zBhK09Ot6Q/5/z50CRTlGkFICFzBSwFy0ZRqGA4Jm2c="
+      "fotoklubassvetaine.blazorclient.pdb": "sha256-JyP6mH5EzPNf6lDDQCmOB3YL2fwowHsD6QzYJF7OUBA="
     },
     "libraryInitializers": {
       "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js": "sha256-htNuF2gbem5vP85zcYVih92CTJrIeZj4ghrN/AHd9VM=",

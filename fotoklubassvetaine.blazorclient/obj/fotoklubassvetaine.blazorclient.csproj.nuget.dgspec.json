@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ignas\\Desktop\\GitHub\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj": {}
+    "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ignas\\Desktop\\GitHub\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj": {
+    "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ignas\\Desktop\\GitHub\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj",
         "projectName": "fotoklubassvetaine.blazorclient",
-        "projectPath": "C:\\Users\\ignas\\Desktop\\GitHub\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj",
-        "packagesPath": "C:\\Users\\ignas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ignas\\Desktop\\GitHub\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ignas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -77,13 +78,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.10, )",
+              "version": "[8.0.13, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.10, )",
+              "version": "[9.0.2, )",
               "autoReferenced": true
             },
             "Radzen.Blazor": {
@@ -105,7 +106,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.10, 8.0.10]"
+              "version": "[8.0.13, 8.0.13]"
             }
           ],
           "frameworkReferences": {
@@ -113,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

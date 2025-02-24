@@ -1209,9 +1209,6 @@ C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\f
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\refint\fotoklubassvetaine.blazorclient.dll
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.pdb
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\ref\fotoklubassvetaine.blazorclient.dll
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-pe043edv16.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-m0t0w8p2u9.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-eefgnnld7s.gz
 C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
 C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map
@@ -2420,3 +2417,6 @@ C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\
 C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\refint\fotoklubassvetaine.blazorclient.dll
 C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.pdb
 C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\ref\fotoklubassvetaine.blazorclient.dll
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-rddqntks7t.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-fy1h7emt9x.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-sfugxia5zq.gz

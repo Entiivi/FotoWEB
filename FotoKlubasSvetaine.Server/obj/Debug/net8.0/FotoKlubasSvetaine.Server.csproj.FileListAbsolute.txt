@@ -608,3 +608,4 @@ C:\Users\ignas\Desktop\GitHub\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0
 C:\Users\ignas\Desktop\GitHub\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\FotoKlubasSvetaine.Server.pdb
 C:\Users\ignas\Desktop\GitHub\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\FotoKlubasSvetaine.Server.genruntimeconfig.cache
 C:\Users\ignas\Desktop\GitHub\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\ref\FotoKlubasSvetaine.Server.dll
+C:\Users\User\Desktop\FotoWEB\FotoKlubasSvetaine.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
