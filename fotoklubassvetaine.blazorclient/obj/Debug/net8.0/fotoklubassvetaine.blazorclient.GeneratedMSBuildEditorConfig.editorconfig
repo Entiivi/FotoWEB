@@ -13,49 +13,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = fotoklubassvetaine.blazorclient
 build_property.RootNamespace = fotoklubassvetaine.blazorclient
-build_property.ProjectDir = C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\
+build_property.ProjectDir = C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient
+build_property.MSBuildProjectDirectory = C:\Users\ignas\Desktop\GitHub\FotoWEB\fotoklubassvetaine.blazorclient
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/App.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/Pages/Login.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/Pages/MainPage.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/Pages/MainPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/Pages/PhotoDetails.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/Pages/PhotoDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhvdG9EZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/Pages/Photos.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/Pages/Photos.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGhvdG9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/Pages/Upload.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/Pages/Upload.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBsb2FkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/_Imports.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/Layout/MainLayout.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-zraznxju0k
 
-[C:/Users/User/Desktop/FotoWEB/fotoklubassvetaine.blazorclient/Layout/NavMenu.razor]
+[C:/Users/ignas/Desktop/GitHub/FotoWEB/fotoklubassvetaine.blazorclient/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-p2rw80drjv

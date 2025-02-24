@@ -29,14 +29,14 @@ if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
         '--format',
         'Pem',
         '--no-password',
-    ], { stdio: 'inherit', }).status) {
+    ], { stdio: 'inherit' }).status) {
         throw new Error("Could not create certificate.");
     }
 }
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// https://vitejs.dev/config/
+// Updated configuration with ports
 export default defineConfig({
     plugins: [react()],
     resolve: {
@@ -45,14 +45,21 @@ export default defineConfig({
         }
     },
     server: {
+        port: 5173, // React frontend (HTTP)
+        https: {
+            key: fs.readFileSync(keyFilePath),
+            cert: fs.readFileSync(certFilePath),
+        },
         proxy: {
             '/api': {
-                target: 'https://localhost:7295/login',
+                target: 'https://localhost:7001', // .NET API HTTPS port
                 changeOrigin: true,
                 secure: false
             }
-        },
-        port: 5173,
+        }
+    },
+    preview: {
+        port: 5174, // React frontend (HTTPS)
         https: {
             key: fs.readFileSync(keyFilePath),
             cert: fs.readFileSync(certFilePath),

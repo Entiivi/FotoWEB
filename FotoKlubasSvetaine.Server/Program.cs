@@ -26,14 +26,14 @@ var logger = LoggerFactory.Create(logging =>
 
 logger.LogInformation("Starting application...");
 
+// Set WebRootPath for static files
 builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
-    WebRootPath = "Nuotraukos" // Set the Nuotraukos folder as the web root
+    WebRootPath = "Nuotraukos"
 });
-
 logger.LogInformation("Web root set to 'Nuotraukos'");
 
-// Add Authentication (Google & GitHub Login)
+// Authentication (Google & GitHub)
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -41,10 +41,10 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
 })
 .AddCookie()
-.AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+.AddGoogle(options =>
 {
-    options.ClientId = builder.Configuration.GetSection("GoogleAuth:ClientId").Value ?? throw new ArgumentNullException("GoogleAuth:ClientId is not configured.");
-    options.ClientSecret = builder.Configuration.GetSection("GoogleAuth:ClientSecret").Value ?? throw new ArgumentNullException("GoogleAuth:ClientSecret is not configured.");
+    options.ClientId = builder.Configuration["GoogleAuth:ClientId"] ?? throw new ArgumentNullException("GoogleAuth:ClientId is not configured.");
+    options.ClientSecret = builder.Configuration["GoogleAuth:ClientSecret"] ?? throw new ArgumentNullException("GoogleAuth:ClientSecret is not configured.");
     options.SaveTokens = true;
     options.CallbackPath = "/signin-google";
 })
@@ -55,32 +55,28 @@ builder.Services.AddAuthentication(options =>
     options.CallbackPath = "/signin-github";
     options.SaveTokens = true;
 });
-
 logger.LogInformation("Authentication configured");
 
-// Configure session
+// Session Configuration
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-
 logger.LogInformation("Session services configured");
 
-// Configure database connection (MySQL)
+// Database Connection (MySQL)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
                      new MySqlServerVersion(new Version(8, 0, 21))));
-
 logger.LogInformation("Database connection established");
 
-// Add repositories to DI container
+// Repositories
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<IFotografijaRepository, FotografijaRepository>();
 
-// Add controllers
-builder.Services.AddControllers();
+// Controllers and Razor Pages
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add(new IgnoreAntiforgeryTokenAttribute());
@@ -89,24 +85,27 @@ builder.Services.AddRazorPages(options =>
 {
     options.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
 });
-
 logger.LogInformation("Controllers and Razor Pages configured");
 
-// Configure CORS
+// CORS Configuration
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend", builder =>
+    options.AddPolicy("AllowFrontend", corsBuilder =>
     {
-        builder.WithOrigins("https://localhost:5173", "https://localhost:5027")
-               .AllowAnyHeader()
-               .AllowAnyMethod()
-               .AllowCredentials();
+        corsBuilder.WithOrigins(
+            "https://localhost:5173",    // React frontend
+            "https://localhost:5281",    // Razor UI
+            "http://localhost:5173",     // React HTTP
+            "http://localhost:5281"      // Razor HTTP
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
     });
 });
-
 logger.LogInformation("CORS policy configured");
 
-// Add Swagger/OpenAPI
+// Swagger Configuration
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -118,36 +117,35 @@ builder.Services.AddSwaggerGen(c =>
         Contact = new OpenApiContact
         {
             Name = "FotoKlubas",
-            Email = string.Empty,
             Url = new Uri("https://FotoKlubas.com"),
         }
     });
 });
-
 logger.LogInformation("Swagger configured");
 
+// Kestrel Port Configuration with Logging
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    serverOptions.ListenAnyIP(5027);
-    serverOptions.ListenAnyIP(7295, listenOptions =>
+    serverOptions.ListenAnyIP(5001);
+    logger.LogInformation("HTTP listening on http://localhost:5001");
+
+    serverOptions.ListenAnyIP(7001, listenOptions =>
     {
         listenOptions.UseHttps();
+        logger.LogInformation("HTTPS listening on https://localhost:7001");
     });
 });
-
+logger.LogInformation("Kestrel ports configured (5001 HTTP, 7001 HTTPS)");
 
 var app = builder.Build();
-
-logger.LogInformation("Application is starting...");
+logger.LogInformation("Application is building...");
 
 // Middleware pipeline
 app.UseSession();
-
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
-
 app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
 app.UseRouting();
@@ -155,28 +153,25 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
 app.UseStaticFiles();
-
 logger.LogInformation("Middleware configured");
 
-// Enable Swagger middleware
+// Swagger UI
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "FotoKlubas API v1");
     c.RoutePrefix = "swagger";
 });
+logger.LogInformation("Swagger UI available at https://localhost:7001/swagger");
 
-logger.LogInformation("Swagger UI available at /swagger");
-
-// Map API endpoints
+// API Endpoints
 app.MapFotografijaEndpoints();
 app.MapLoginEndpoints();
 app.MapUploadEndpoints();
 app.MapUserEndpoints();
+logger.LogInformation("API Endpoints mapped");
 
-logger.LogInformation("Endpoints mapped");
-
-// Static file serving
+// Static Files
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(
@@ -185,20 +180,18 @@ app.UseStaticFiles(new StaticFileOptions
     ServeUnknownFileTypes = false,
     DefaultContentType = "image/jpeg"
 });
-
 logger.LogInformation("Static file serving configured for /Nuotraukos");
 
-// Google Login
+// Authentication Endpoints
 app.MapGet("/login", async context =>
 {
     logger.LogInformation("User attempting Google login...");
     await context.ChallengeAsync(GoogleDefaults.AuthenticationScheme, new AuthenticationProperties
     {
-        RedirectUri = "/"
+        RedirectUri = "/Main"
     });
 });
 
-// GitHub Login
 app.MapGet("/login/github", async (HttpContext context) =>
 {
     logger.LogInformation("User attempting GitHub login...");
@@ -208,15 +201,20 @@ app.MapGet("/login/github", async (HttpContext context) =>
     });
 });
 
-// Logout
 app.MapGet("/logout", async (HttpContext context) =>
 {
     logger.LogInformation("User logging out...");
     await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-    context.Response.Redirect("/");
+    context.Response.Redirect("/login");
 });
 
-app.UseWebSockets();
+// Port Verification (Logs Active Ports)
+var urls = app.Urls;
+foreach (var url in urls)
+{
+    logger.LogInformation($"Application running at: {url}");
+}
 
+app.UseWebSockets();
 logger.LogInformation("Application is running...");
 app.Run();
