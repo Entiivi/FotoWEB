@@ -7,13 +7,6 @@
 
 <FluentCard style="display: flex; min-height: 100vh; background-color: #f5f5f5; padding: 16px; gap: 16px;">
 
-    <!-- Sidebar -->
-    <FluentCard class= "mainnav">
-        <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToUploadPhoto">Upload Photo</FluentButton>
-        <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToLoginInfo">Login Information</FluentButton>
-        <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToPersonalInfo">Personal Information</FluentButton>
-    </FluentCard>
-
     <!-- Photo Gallery -->
     <FluentCard style="flex-grow: 1; padding: 24px;">
         @if (loading)
@@ -56,7 +49,7 @@
     {
         try
         {
-            var response = await Http.GetAsync("fotografija"); // Relative path based on base address
+            var response = await Http.GetAsync("fotografija");  // Ensure BaseAddress works
             if (response.IsSuccessStatusCode)
             {
                 photos = await response.Content.ReadFromJsonAsync<List<Photo>>() ?? new List<Photo>();
@@ -66,13 +59,9 @@
                 Console.WriteLine($"Failed to fetch photos. Status code: {response.StatusCode}");
             }
         }
-        catch (HttpRequestException ex)
-        {
-            Console.WriteLine($"HTTP error: {ex.Message}");
-        }
         catch (Exception ex)
         {
-            Console.WriteLine($"Unexpected error: {ex.Message}");
+            Console.WriteLine($"Error fetching photos: {ex.Message}");
         }
         finally
         {

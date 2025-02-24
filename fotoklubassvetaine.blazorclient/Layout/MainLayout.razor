@@ -1,27 +1,37 @@
 ﻿@inherits LayoutComponentBase
-@using Microsoft.Fast.Components.FluentUI
 @inject NavigationManager Navigation
+@using Microsoft.Fast.Components.FluentUI
 
 <FluentDesignSystemProvider>
-    @if (!Navigation.Uri.Contains("/login") && !Navigation.Uri.Contains("/Main"))
+    @if (!Navigation.Uri.Contains("/login") && !Navigation.Uri.Contains("/main"))
     {
-        <FluentCard>
-            <FluentNav>
-                <FluentAnchor Href="/" Appearance="Appearance.Stealth">🏠 Home</FluentAnchor>
-                <FluentAnchor Href="/photos" Appearance="Appearance.Stealth">📷 Photos</FluentAnchor>
-                <FluentAnchor Href="/upload" Appearance="Appearance.Stealth">⬆️ Upload</FluentAnchor>
-            </FluentNav>
+        <FluentCard class="mainnav1">
+            <div class="button-container1">
+                <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToUploadPhoto">Upload Photo</FluentButton>
+                <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToLoginInfo">Login Information</FluentButton>
+                <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToPersonalInfo">Personal Information</FluentButton>
+                <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToPhotos">Photos</FluentButton>
+            </div>
         </FluentCard>
     }
 
-    <FluentCard>
+    <FluentCard style="width: 100%;">
         <main>
             @Body
         </main>
     </FluentCard>
 </FluentDesignSystemProvider>
+
+<!-- Fluent UI Providers -->
 <FluentToastProvider />
 <FluentDialogProvider />
 <FluentTooltipProvider />
 <FluentMessageBarProvider />
 <FluentMenuProvider />
+
+@code {
+    private void NavigateToUploadPhoto() => Navigation.NavigateTo("/upload");
+    private void NavigateToLoginInfo() => Navigation.NavigateTo("/login-info");
+    private void NavigateToPersonalInfo() => Navigation.NavigateTo("/personal-info");
+    private void NavigateToPhotos() => Navigation.NavigateTo("/photos");
+}

@@ -9,11 +9,31 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Antiforgery;
 using AspNet.Security.OAuth.GitHub;
-
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Authentication (Google Login)
+// Configure logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+builder.Logging.SetMinimumLevel(LogLevel.Information);
+
+var logger = LoggerFactory.Create(logging =>
+{
+    logging.AddConsole();
+}).CreateLogger("Startup");
+
+logger.LogInformation("Starting application...");
+
+builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    WebRootPath = "Nuotraukos" // Set the Nuotraukos folder as the web root
+});
+
+logger.LogInformation("Web root set to 'Nuotraukos'");
+
+// Add Authentication (Google & GitHub Login)
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -29,73 +49,65 @@ builder.Services.AddAuthentication(options =>
     options.CallbackPath = "/signin-google";
 })
 .AddGitHub(options =>
- {
-     options.ClientId = builder.Configuration["GitHubAuth:ClientId"];
-     options.ClientSecret = builder.Configuration["GitHubAuth:ClientSecret"];
-     options.CallbackPath = "/signin-github"; // GitHub callback path
-     options.SaveTokens = true;
- });
+{
+    options.ClientId = builder.Configuration["GitHubAuth:ClientId"];
+    options.ClientSecret = builder.Configuration["GitHubAuth:ClientSecret"];
+    options.CallbackPath = "/signin-github";
+    options.SaveTokens = true;
+});
 
+logger.LogInformation("Authentication configured");
 
+// Configure session
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true; // Required for non-EU cookie policies
+    options.Cookie.IsEssential = true;
 });
 
-
-// Configure cookies
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.Cookie.HttpOnly = true;
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-    options.SlidingExpiration = true;
-    options.LoginPath = "/login";  // Path for login
-    options.ExpireTimeSpan = TimeSpan.FromDays(1);
-});
-
-// Add services to the container
+logger.LogInformation("Session services configured");
 
 // Configure database connection (MySQL)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
                      new MySqlServerVersion(new Version(8, 0, 21))));
 
-// Add repositories to the DI container
+logger.LogInformation("Database connection established");
+
+// Add repositories to DI container
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<IFotografijaRepository, FotografijaRepository>();
 
 // Add controllers
 builder.Services.AddControllers();
-
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add(new IgnoreAntiforgeryTokenAttribute());
 });
-
 builder.Services.AddRazorPages(options =>
 {
     options.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
 });
 
+logger.LogInformation("Controllers and Razor Pages configured");
 
-// Add CORS policy
+// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", builder =>
     {
-        builder.WithOrigins("https://localhost:5173", "https://localhost:5001") // Frontend URL
-               .SetIsOriginAllowed(_ => true)
+        builder.WithOrigins("https://localhost:5173", "https://localhost:5027")
                .AllowAnyHeader()
                .AllowAnyMethod()
                .AllowCredentials();
     });
 });
 
+logger.LogInformation("CORS policy configured");
 
-// Add Swagger/OpenAPI support
-builder.Services.AddEndpointsApiExplorer(); // Required for Minimal APIs
+// Add Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -110,108 +122,101 @@ builder.Services.AddSwaggerGen(c =>
             Url = new Uri("https://FotoKlubas.com"),
         }
     });
-
 });
 
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
-builder.Logging.AddDebug();
-builder.Logging.SetMinimumLevel(LogLevel.Information);
-builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Warning);
+logger.LogInformation("Swagger configured");
 
-
-builder.Services.AddAntiforgery(options =>
+builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    options.HeaderName = "X-CSRF-TOKEN"; // Custom header for token
-    options.Cookie.Name = "X-CSRF-TOKEN"; // Cookie for anti-forgery validation
-    options.Cookie.HttpOnly = true; // Ensure it's secure
-    options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // HTTPS only
+    serverOptions.ListenAnyIP(5027);
+    serverOptions.ListenAnyIP(7295, listenOptions =>
+    {
+        listenOptions.UseHttps();
+    });
 });
 
 
 var app = builder.Build();
 
+logger.LogInformation("Application is starting...");
+
+// Middleware pipeline
 app.UseSession();
-// Configure the middleware pipeline
 
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
 
-// Enable CORS
 app.UseCors("AllowFrontend");
-// Enable HTTPS redirection
 app.UseHttpsRedirection();
-// Enable routing
 app.UseRouting();
-// Enable authentication and authorization middleware
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
 app.UseStaticFiles();
-app.MapFallbackToFile("index.html");
 
+logger.LogInformation("Middleware configured");
 
 // Enable Swagger middleware
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "FotoKlubas API v1");
-    c.RoutePrefix = "swagger"; // Swagger UI available at /swagger
+    c.RoutePrefix = "swagger";
 });
 
-// Map Minimal API endpoints
+logger.LogInformation("Swagger UI available at /swagger");
+
+// Map API endpoints
 app.MapFotografijaEndpoints();
 app.MapLoginEndpoints();
 app.MapUploadEndpoints();
 app.MapUserEndpoints();
 
+logger.LogInformation("Endpoints mapped");
 
-app.MapGet("/antiforgery-token", async (IAntiforgery antiforgery, HttpContext context) =>
-{
-    var tokens = antiforgery.GetAndStoreTokens(context);
-    return Results.Json(new { token = tokens.RequestToken });
-});
-
-
+// Static file serving
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(
         Path.Combine(Directory.GetCurrentDirectory(), "Nuotraukos")),
     RequestPath = "/Nuotraukos",
-    ServeUnknownFileTypes = false, 
+    ServeUnknownFileTypes = false,
     DefaultContentType = "image/jpeg"
 });
 
+logger.LogInformation("Static file serving configured for /Nuotraukos");
 
-// Add Google Login routes
+// Google Login
 app.MapGet("/login", async context =>
 {
+    logger.LogInformation("User attempting Google login...");
     await context.ChallengeAsync(GoogleDefaults.AuthenticationScheme, new AuthenticationProperties
     {
         RedirectUri = "/"
     });
 });
 
-
-// GitHub Login Route
+// GitHub Login
 app.MapGet("/login/github", async (HttpContext context) =>
 {
+    logger.LogInformation("User attempting GitHub login...");
     await context.ChallengeAsync(GitHubAuthenticationDefaults.AuthenticationScheme, new AuthenticationProperties
     {
         RedirectUri = "https://localhost:5173/main"
     });
 });
 
+// Logout
 app.MapGet("/logout", async (HttpContext context) =>
 {
+    logger.LogInformation("User logging out...");
     await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-    context.Response.Redirect("/"); // Redirect to the login page or homepage
+    context.Response.Redirect("/");
 });
-
 
 app.UseWebSockets();
 
-// Run the application
+logger.LogInformation("Application is running...");
 app.Run();

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 builder.RootComponents.Add<App>("#app");
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:5000/") });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:5027/") });
 builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddFluentUIComponents();
 builder.Services.AddAuthorizationCore();

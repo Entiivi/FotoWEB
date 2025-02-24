@@ -31,3 +31,31 @@ fluent-button[appearance="accent"] {
     --accent-fill-rest: #5c4ea2;
     --accent-fill-hover: #7160c9;
 }
+
+/* Main navigation card styling */
+.mainnav1 {
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Ensure the button container takes full width */
+.button-container1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+    /* Ensure buttons stretch evenly and don’t overlap */
+    .button-container fluent-button {
+        flex: 1; /* Equal space for each button */
+        text-align: center;
+        white-space: nowrap;
+        min-width: 0;
+        max-width: 100%; /* Prevent overflow */
+    }
