@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\css\\mainblazor.css"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\photos.css",
+      "PackagePath": "staticwebassets\\css\\photos.css"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },

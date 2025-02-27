@@ -1,24 +1,22 @@
 ﻿@page "/"
-@inject HttpClient Http
 @inject NavigationManager Navigation
-@using Microsoft.Fast.Components.FluentUI
+@inject HttpClient Http
 
-<link rel="stylesheet" href="css/mainblazor.css" />
+<link rel="stylesheet" href="/css/mainblazor.css" />
 
-<!-- Main Layout -->
-<FluentDesignSystemProvider style="width: 100vw; height: 100vh; overflow: auto; background-color: #2C253B; color: white; font-family: 'Arial', sans-serif; padding: 20px;">
+<FluentDesignSystemProvider class="homepage-container1">
 
     <!-- Hero Section -->
-    <FluentCard style="text-align: center; padding: 60px 20px; background: linear-gradient(45deg, #6a5acd, #8a2be2); color: white; border-radius: 16px; margin-bottom: 30px;">
-        <h1>Welcome to FotoKlubas 📷</h1>
+    <FluentCard class="hero-section">
+        <h1>Welcome to FotoKlubas</h1>
         <p>Share, explore, and cherish the best moments captured by our community.</p>
         <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToGallery">Explore Gallery</FluentButton>
         <FluentButton Appearance="Appearance.Neutral" @onclick="NavigateToRegister" style="margin-left: 10px;">Join Now</FluentButton>
     </FluentCard>
 
     <!-- Recent Uploads Section -->
-    <section style="margin-bottom: 30px;">
-        <h2>📸 Recent Uploads</h2>
+    <section class="recent-uploads">
+        <h2>Recent Uploads</h2>
         @if (loading)
         {
             <FluentProgressRing />
@@ -29,15 +27,12 @@
         }
         else
         {
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
-                @foreach (var photo in photos.Take(6)) // Show 6 recent photos
+            <div class="photo-grid">
+                @foreach (var photo in photos.Take(6))
                 {
-                    <FluentCard style="overflow: hidden; border-radius: 8px; cursor: pointer;" @onclick="() => HandlePhotoClick(photo)">
-                        <img src="@($"https://localhost:5027/Nuotraukos/{photo.FotoPath}")" alt="@photo.Pavadinimas"
-                             style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.3s;"
-                             onmouseover="this.style.transform='scale(1.05)'"
-                             onmouseout="this.style.transform='scale(1)'">
-                        <p style="text-align: center; margin: 10px 0;">@photo.Pavadinimas</p>
+                    <FluentCard class="photo-card" @onclick="() => HandlePhotoClick(photo)">
+                        <img src="@($"https://localhost:7001/{photo.FotoPath}")" alt="@photo.Pavadinimas">
+                        <p class="photo-title">@photo.Pavadinimas</p>
                     </FluentCard>
                 }
             </div>
@@ -45,32 +40,32 @@
     </section>
 
     <!-- Photo of the Month Section -->
-    <section style="margin-bottom: 30px;">
-        <FluentCard style="padding: 20px; background-color: #3e3e3e; border-radius: 16px;">
-            <h3>🌟 Photo of the Month</h3>
-            <img src="https://localhost:5027/Nuotraukos/featured.jpg" alt="Photo of the Month"
-                 style="width: 100%; border-radius: 8px; margin: 10px 0;">
-            <p>Captured by: <strong>John Doe</strong></p>
+    <section class="photo-of-month">
+        <FluentCard class="photo-month-card">
+            <h3>Photo of the Month</h3>
+            <img src="https://localhost:7001/Nuotraukos/DSC_1040.JPG" alt="Photo of the Month">
+            <p>Captured by: <strong>Ignas Sakalauskas</strong></p>
         </FluentCard>
     </section>
 
     <!-- About Section -->
-    <section style="margin-bottom: 30px; text-align: center;">
-        <h2>💡 About FotoKlubas</h2>
+    <section class="about-section">
+        <h2>About FotoKlubas</h2>
         <p>FotoKlubas is a vibrant community of photography enthusiasts. Whether you're a beginner or a pro, share your shots, explore stunning images, and connect with fellow photographers.</p>
     </section>
 
     <!-- Contact Section -->
-    <section style="margin-bottom: 30px; text-align: center;">
+    <section class="contact-section">
         <h2>📞 Contact Us</h2>
         <p>Email: support@fotoklubas.com | Phone: +370 123 4567</p>
         <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToContact">Get in Touch</FluentButton>
     </section>
 
     <!-- Footer -->
-    <footer style="text-align: center; padding: 10px; background-color: #1f1f1f; border-radius: 8px;">
+    <footer class="footer">
         &copy; @DateTime.Now.Year FotoKlubas. All Rights Reserved.
     </footer>
+
 </FluentDesignSystemProvider>
 
 @code {
@@ -86,7 +81,7 @@
     {
         try
         {
-            var response = await Http.GetAsync("https://localhost:5027/fotografija");
+            var response = await Http.GetAsync("https://localhost:7001/fotografija");
             if (response.IsSuccessStatusCode)
             {
                 photos = await response.Content.ReadFromJsonAsync<List<Photo>>() ?? new List<Photo>();
@@ -110,7 +105,6 @@
         }
     }
 
-    // Navigation Methods
     private void NavigateToGallery() => Navigation.NavigateTo("/gallery");
     private void NavigateToRegister() => Navigation.NavigateTo("/register");
     private void NavigateToContact() => Navigation.NavigateTo("/contact");

@@ -1,0 +1,52 @@
+﻿
+body {
+    background-color: rgba(44, 37, 59, 1);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mainnav {
+    width: 40vw;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+    
+/* Main Container */
+.main-container {
+    display: flex;
+    height: 100vh;
+    padding: 16px;
+    width: 100vw;
+    height: 100vh;
+    gap: 16px;
+}
+
+
+/* Progress Ring */
+fluent-progress-ring {
+    display: block;
+    margin: auto;
+    color: #5c4ea2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -2403,9 +2403,6 @@ C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\c
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\fqehzrir32-tptq2av103.gz
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\x1w8640jh3-lfu7j35m59.gz
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\jikhobxmv3-oyz0vx2fzb.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-5fd0itaqhb.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-1yrfmjjsai.gz
-C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-5v10x5sdku.gz
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -2420,3 +2417,6 @@ C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\f
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\refint\fotoklubassvetaine.blazorclient.dll
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\fotoklubassvetaine.blazorclient.pdb
 C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\ref\fotoklubassvetaine.blazorclient.dll
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\v7mpprcxo9-cm4yq8t7vb.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\zj4v8f5cla-wrum3fas56.gz
+C:\Users\User\Desktop\FotoWEB\fotoklubassvetaine.blazorclient\obj\Debug\net8.0\compressed\3mta9hn2m5-r4fb8di5ln.gz

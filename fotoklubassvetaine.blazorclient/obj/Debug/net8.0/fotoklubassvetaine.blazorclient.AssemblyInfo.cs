@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fotoklubassvetaine.blazorclient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a5502c0b04ce0cb72a8122519c989f87117adef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02e0cc6461eb150dcb4359495872f620edb61aca")]
 [assembly: System.Reflection.AssemblyProductAttribute("fotoklubassvetaine.blazorclient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fotoklubassvetaine.blazorclient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

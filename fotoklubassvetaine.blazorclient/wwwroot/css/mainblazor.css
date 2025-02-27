@@ -1,52 +1,139 @@
-﻿
+﻿/* Main Layout */
 body {
-    background-color: rgba(44, 37, 59, 1);
-    background-size: cover;
+    height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    background-color: #2C253B;
+    color: white;
+    font-family: 'PixelifySans', sans-serif !important;
+}
+
+.h1 {
+    font-family: 'PixelifySans', sans-serif !important;
+}
+/* Cards */
+fluent-card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+}
+.main {
+    align-content: center;
+}
+
+/* Image Styling */
+img {
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+    img:hover {
+        transform: scale(1.05);
+    }
+/* General Page Styles */
+.homepage-container1 {
     width: 100vw;
     height: 100vh;
+    overflow: auto;
+    background-color: #2C253B;
+    color: white;
+    font-family: 'PixelifySans', sans-serif !important;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer & Edge */
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #6a5acd, #8a2be2);
+    color: white;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+/* Recent Uploads */
+.recent-uploads h2,
+.photo-of-month h3,
+.about-section h2,
+.contact-section h2 {
+    text-align: center;
+    color: white;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+/* Photo Card */
+.photo-card {
     overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #3a3a3a;
+    padding: 10px;
+    transition: transform 0.3s;
 }
 
-.mainnav {
-    width: 40vw;
-    padding: 24px;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
-    
-/* Main Container */
-.main-container {
-    display: flex;
-    height: 100vh;
-    padding: 16px;
-    width: 100vw;
-    height: 100vh;
-    gap: 16px;
-}
-
-
-/* Progress Ring */
-fluent-progress-ring {
-    display: block;
-    margin: auto;
-    color: #5c4ea2;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-container {
-        flex-direction: column;
+    .photo-card:hover {
+        transform: scale(1.05);
     }
 
-    .sidebar {
+    .photo-card img {
         width: 100%;
-        margin-bottom: 16px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
     }
 
-    .photo-grid {
-        grid-template-columns: 1fr;
-    }
+.photo-title {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
+
+/* Photo of the Month */
+.photo-month-card {
+    padding: 20px;
+    background-color: #3e3e3e;
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+}
+
+    .photo-month-card img {
+        width: 60%;
+        border-radius: 8px;
+        margin: 10px 0;
+        color: white;
+    }
+
+/* About & Contact */
+.about-section,
+.contact-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.homepage-container::-webkit-scrollbar {
+    display: none;
+}
+
