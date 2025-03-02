@@ -1,20 +1,4 @@
-﻿body {
-    background-color: rgba(44, 37, 59, 1);
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-fluent-card {
-    border-radius: 0px;
-    background-color: rgba(44, 37, 59, 1) !important;
-    border: none !important;
-    box-shadow: none;
-}
-
+﻿
 fluent-button::part(control) {
     outline: none;
     border: none;
@@ -32,19 +16,24 @@ fluent-button[appearance="accent"] {
     --accent-fill-hover: #7160c9;
 }
 
+fluent-card{
+    border: none;
+}
+
 /* Main navigation card styling */
-.mainnav1 {
-    width: 100%;
-    padding: 10px 0;
-    box-sizing: border-box;
-    background-color: transparent;
-    margin-bottom: 10px;
+.mainnav {
+    padding: 50px 0;
+    background-color: #2C253B;
+    border-radius: 16px;
+    padding: 1vw;
+    margin: 1vw;
+    align-content: center;
 }
 
 /* Ensure the button container takes full width */
 .button-container1 {
     display: flex;
-    width: 100%;
+    width: 95%;
     align-items: center;
     gap: 10px;
     padding: 10px 0;
@@ -59,3 +48,16 @@ fluent-button[appearance="accent"] {
         min-width: 0;
         max-width: 100%; /* Prevent overflow */
     }
+
+.maincontainercontent {
+    border-radius: 16px;
+    padding: 20px;
+    background-color: #2C253B;
+    margin: 1vw;
+}
+
+body {
+    background-color: #2C253B;
+    color: white;
+    font-family: 'PixelifySans', sans-serif !important;
+}

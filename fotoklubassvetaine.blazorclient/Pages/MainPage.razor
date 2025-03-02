@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="/css/mainblazor.css" />
 
-<FluentDesignSystemProvider class="homepage-container1">
+<div class="homepage-container">
 
     <!-- Hero Section -->
     <FluentCard class="hero-section">
@@ -28,7 +28,7 @@
         else
         {
             <div class="photo-grid">
-                @foreach (var photo in photos.Take(6))
+                @foreach (var photo in photos.Take(5))
                 {
                     <FluentCard class="photo-card" @onclick="() => HandlePhotoClick(photo)">
                         <img src="@($"https://localhost:7001/{photo.FotoPath}")" alt="@photo.Pavadinimas">
@@ -66,7 +66,7 @@
         &copy; @DateTime.Now.Year FotoKlubas. All Rights Reserved.
     </footer>
 
-</FluentDesignSystemProvider>
+</div>
 
 @code {
     private List<Photo> photos = new();
