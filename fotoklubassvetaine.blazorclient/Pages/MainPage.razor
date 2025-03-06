@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/main"
 @inject NavigationManager Navigation
 @inject HttpClient Http
 
@@ -11,7 +11,6 @@
         <h1>Welcome to FotoKlubas</h1>
         <p>Share, explore, and cherish the best moments captured by our community.</p>
         <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToGallery">Explore Gallery</FluentButton>
-        <FluentButton Appearance="Appearance.Neutral" @onclick="NavigateToRegister" style="margin-left: 10px;">Join Now</FluentButton>
     </FluentCard>
 
     <!-- Recent Uploads Section -->
@@ -47,25 +46,6 @@
             <p>Captured by: <strong>Ignas Sakalauskas</strong></p>
         </FluentCard>
     </section>
-
-    <!-- About Section -->
-    <section class="about-section">
-        <h2>About FotoKlubas</h2>
-        <p>FotoKlubas is a vibrant community of photography enthusiasts. Whether you're a beginner or a pro, share your shots, explore stunning images, and connect with fellow photographers.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <h2>📞 Contact Us</h2>
-        <p>Email: support@fotoklubas.com | Phone: +370 123 4567</p>
-        <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToContact">Get in Touch</FluentButton>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        &copy; @DateTime.Now.Year FotoKlubas. All Rights Reserved.
-    </footer>
-
 </div>
 
 @code {
@@ -105,8 +85,7 @@
         }
     }
 
-    private void NavigateToGallery() => Navigation.NavigateTo("/gallery");
-    private void NavigateToRegister() => Navigation.NavigateTo("/register");
+    private void NavigateToGallery() => Navigation.NavigateTo("/photos");
     private void NavigateToContact() => Navigation.NavigateTo("/contact");
 
     private void HandlePhotoClick(Photo photo)

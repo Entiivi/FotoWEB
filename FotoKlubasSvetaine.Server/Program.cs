@@ -26,13 +26,6 @@ var logger = LoggerFactory.Create(logging =>
 
 logger.LogInformation("Starting application...");
 
-// Set WebRootPath for static files
-builder = WebApplication.CreateBuilder(new WebApplicationOptions
-{
-    WebRootPath = "Nuotraukos"
-});
-logger.LogInformation("Web root set to 'Nuotraukos'");
-
 // Authentication (Google & GitHub)
 builder.Services.AddAuthentication(options =>
 {
@@ -93,8 +86,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", corsBuilder =>
     {
         corsBuilder.WithOrigins(
-            "https://localhost:5173",    // React frontend
-            "https://localhost:5281",    // Razor UI
+            "https://localhost:5173",    // React HTTPS
+            "https://localhost:7281",    // Razor HTTPS
             "http://localhost:5173",     // React HTTP
             "http://localhost:5281"      // Razor HTTP
         )
@@ -135,6 +128,8 @@ builder.WebHost.ConfigureKestrel(serverOptions =>
         logger.LogInformation("HTTPS listening on https://localhost:7001");
     });
 });
+
+
 logger.LogInformation("Kestrel ports configured (5001 HTTP, 7001 HTTPS)");
 
 var app = builder.Build();
@@ -146,9 +141,9 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
-app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();

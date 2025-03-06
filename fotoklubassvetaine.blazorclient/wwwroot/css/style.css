@@ -28,6 +28,9 @@ fluent-card{
     padding: 1vw;
     margin: 1vw;
     align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000
 }
 
 /* Ensure the button container takes full width */
@@ -60,4 +63,10 @@ body {
     background-color: #2C253B;
     color: white;
     font-family: 'PixelifySans', sans-serif !important;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }

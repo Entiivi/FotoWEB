@@ -71,8 +71,9 @@ img {
 
 /* Photo of the Month */
 .photo-month-card {
+    margin-top: 20px;
     padding: 20px;
-    background-color: #3e3e3e;
+    background: linear-gradient(45deg, #6a5acd, #8a2be2);
     border-radius: 16px;
     text-align: center;
     color: white;

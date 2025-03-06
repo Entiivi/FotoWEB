@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "fotoklubassvetaine.blazorclient",
   "resources": {
-    "hash": "sha256-WBOtdu6O/j7aWlz/rYgPhCjvNHBuKCuIGemkQQsmR9M=",
+    "hash": "sha256-WKAc2lBUdVSiMGR7Om8pPKONAOJYYQfGiuFWVrM5v8U=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -244,10 +244,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "fotoklubassvetaine.blazorclient.wasm": "sha256-TSs8htut+h8Q2/Ch99aIachZn0Gu9NADlFBQTS+qp1Q="
+      "fotoklubassvetaine.blazorclient.wasm": "sha256-ZcBahhDEXaOcRF6lK22qFrlROrigrIx1x0PJMsSAI6A="
     },
     "pdb": {
-      "fotoklubassvetaine.blazorclient.pdb": "sha256-Zg7FIlenysqv7fJnRshR5SP8W/kYI89HLJiG0+KOcg0="
+      "fotoklubassvetaine.blazorclient.pdb": "sha256-6fHdm7ytq0Bpp8Uif1GB5merlL8NW+Tlxnucp94t4nI="
     },
     "libraryInitializers": {
       "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js": "sha256-htNuF2gbem5vP85zcYVih92CTJrIeZj4ghrN/AHd9VM=",

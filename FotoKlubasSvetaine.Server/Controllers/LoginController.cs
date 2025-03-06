@@ -28,7 +28,7 @@ public static class LoginEndpoints
             // Challenge the user to log in with Google
             await context.ChallengeAsync(GoogleDefaults.AuthenticationScheme, new AuthenticationProperties
             {
-                RedirectUri = "https://localhost:5173/main" // Where to redirect after Google login
+                RedirectUri = "https://localhost:5281/main" // Where to redirect after Google login
             });
         })
         .WithTags("Login")
