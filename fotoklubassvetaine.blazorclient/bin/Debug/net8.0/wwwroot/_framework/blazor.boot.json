@@ -1,15 +1,15 @@
 {
   "mainAssemblyName": "fotoklubassvetaine.blazorclient",
   "resources": {
-    "hash": "sha256-WKAc2lBUdVSiMGR7Om8pPKONAOJYYQfGiuFWVrM5v8U=",
+    "hash": "sha256-sbWbsvysT7R2xr+ypSyzfHpkO8w9taqb02ksJJLvL+g=",
     "jsModuleNative": {
-      "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
+      "dotnet.native.js": "sha256-DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.js": "sha256-13vqU3hueOALvSTEM8xnJkJj2exVJYtNc1KZelMCDf0="
+      "dotnet.runtime.js": "sha256-44Vu7OSX4JP89eoc3oTYbYfC5C7USoIWuCw1W9IG6N4="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-XhsharnkthjahGEiBkFjCLc/87/Tecti9860TIEq0H0="
+      "dotnet.native.wasm": "sha256-mICh/Z0HwmHNDnkBnBbRTyDkRYBu3OBkhmuy2F7aUSU="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -244,10 +244,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "fotoklubassvetaine.blazorclient.wasm": "sha256-ZcBahhDEXaOcRF6lK22qFrlROrigrIx1x0PJMsSAI6A="
+      "fotoklubassvetaine.blazorclient.wasm": "sha256-aovAPX9XKXzu5pkEd4GJSnKBJBQfk9NoLbNp2w/xpso="
     },
     "pdb": {
-      "fotoklubassvetaine.blazorclient.pdb": "sha256-6fHdm7ytq0Bpp8Uif1GB5merlL8NW+Tlxnucp94t4nI="
+      "fotoklubassvetaine.blazorclient.pdb": "sha256-aWMqbzjRkiGX7F+4YV/lqCX3BV97dxi6otriDO9rMpU="
     },
     "libraryInitializers": {
       "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js": "sha256-htNuF2gbem5vP85zcYVih92CTJrIeZj4ghrN/AHd9VM=",

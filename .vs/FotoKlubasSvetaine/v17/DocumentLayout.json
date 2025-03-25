@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\FotoWEB\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\AppData\\Local\\Temp\\ed840410-a1d1-4edc-9439-a2442a56a2a5_Saugumo Praktinis2.zip.2a5\\Saugumo Praktinis2\\UploadController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{14A40124-1754-47F8-BA7B-3E2C89068CD4}|fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj|c:\\users\\user\\desktop\\fotoweb\\fotoklubassvetaine.blazorclient\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{14A40124-1754-47F8-BA7B-3E2C89068CD4}|fotoklubassvetaine.blazorclient\\fotoklubassvetaine.blazorclient.csproj|solutionrelative:fotoklubassvetaine.blazorclient\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -78,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,7 +109,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "UploadController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\AppData\\Local\\Temp\\ed840410-a1d1-4edc-9439-a2442a56a2a5_Saugumo Praktinis2.zip.2a5\\Saugumo Praktinis2\\UploadController.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\ed840410-a1d1-4edc-9439-a2442a56a2a5_Saugumo Praktinis2.zip.2a5\\Saugumo Praktinis2\\UploadController.cs",
+              "ToolTip": "C:\\Users\\User\\AppData\\Local\\Temp\\ed840410-a1d1-4edc-9439-a2442a56a2a5_Saugumo Praktinis2.zip.2a5\\Saugumo Praktinis2\\UploadController.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\ed840410-a1d1-4edc-9439-a2442a56a2a5_Saugumo Praktinis2.zip.2a5\\Saugumo Praktinis2\\UploadController.cs [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T00:58:39.219Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\FotoKlubasSvetaine.Server\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "FotoKlubasSvetaine.Server\\Properties\\launchSettings.json",
@@ -114,12 +130,11 @@
               "RelativeToolTip": "FotoKlubasSvetaine.Server\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-03T21:58:38.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T21:58:38.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\Properties\\launchSettings.json",
@@ -127,12 +142,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-03T21:29:52.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T21:29:52.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Program.cs",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\Program.cs",
@@ -140,12 +154,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T21:29:30.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T21:29:30.859Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\FotoKlubasSvetaine.Server\\Program.cs",
               "RelativeDocumentMoniker": "FotoKlubasSvetaine.Server\\Program.cs",
@@ -153,12 +166,11 @@
               "RelativeToolTip": "FotoKlubasSvetaine.Server\\Program.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAswGYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T19:30:02.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T19:30:02.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\App.razor",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\App.razor",
@@ -166,12 +178,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\App.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-02T22:04:37.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T22:04:37.172Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\Layout\\NavMenu.razor",
@@ -179,25 +190,24 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\Layout\\NavMenu.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-02T21:37:55.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T21:37:55.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\Layout\\MainLayout.razor",
               "ToolTip": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Layout\\MainLayout.razor",
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-02T21:32:11.653Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Upload.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Pages\\Upload.razor",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\Pages\\Upload.razor",
@@ -205,12 +215,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\Pages\\Upload.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-02T22:04:43.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T22:04:43.652Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainPage.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Pages\\MainPage.razor",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\Pages\\MainPage.razor",
@@ -218,12 +227,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\Pages\\MainPage.razor",
               "ViewState": "AgIAACQAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-19T11:37:30.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T11:37:30.428Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "mainblazor.css",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\mainblazor.css",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\wwwroot\\css\\mainblazor.css",
@@ -231,12 +239,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\wwwroot\\css\\mainblazor.css",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAEkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-26T12:16:55.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T12:16:55.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
@@ -244,12 +251,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-02T21:32:21.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T21:32:21.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\FotoKlubasSvetaine.Server\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "FotoKlubasSvetaine.Server\\Controllers\\LoginController.cs",
@@ -257,12 +263,11 @@
               "RelativeToolTip": "FotoKlubasSvetaine.Server\\Controllers\\LoginController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAgwCAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T20:09:36.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T20:09:36.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\FotoKlubasSvetaine.Server\\appsettings.json",
               "RelativeDocumentMoniker": "FotoKlubasSvetaine.Server\\appsettings.json",
@@ -270,12 +275,11 @@
               "RelativeToolTip": "FotoKlubasSvetaine.Server\\appsettings.json",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-03T21:23:42.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T21:23:42.034Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\Pages\\Login.razor",
@@ -283,12 +287,11 @@
               "RelativeToolTip": "fotoklubassvetaine.blazorclient\\Pages\\Login.razor",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAFcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-03T19:27:56.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T19:27:56.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\_Imports.razor",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\_Imports.razor",
@@ -300,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "loginblazor.css",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\loginblazor.css",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\wwwroot\\css\\loginblazor.css",
@@ -312,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "photos.css",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\photos.css",
               "RelativeDocumentMoniker": "fotoklubassvetaine.blazorclient\\wwwroot\\css\\photos.css",
