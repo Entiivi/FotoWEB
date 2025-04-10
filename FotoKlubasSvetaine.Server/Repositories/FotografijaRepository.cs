@@ -17,7 +17,10 @@ namespace FotoKlubasSvetaine.Server.Repositories
 
         public async Task<IEnumerable<Fotografija>> GetFotografijos()
         {
-            return await _context.Fotografija.ToListAsync();
+            return await _context.Fotografija
+               .Include(f => f.Narys)
+               .Include(f => f.Klubas)
+               .ToListAsync();
         }
 
         public async Task<Fotografija> GetFotografija(int id)
@@ -43,5 +46,37 @@ namespace FotoKlubasSvetaine.Server.Repositories
             _context.Fotografija.Remove(fotografija);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Fotografija?> GetFotografijaByPavadinimas(string pavadinimas)
+        {
+            return await _context.Fotografija
+                .FirstOrDefaultAsync(f => f.Pavadinimas == pavadinimas);
+        }
+
+        public async Task<IEnumerable<object>> GetFotoInfoForChatbot()
+        {
+            return await _context.Fotografija
+                .Include(f => f.Narys)
+                .Include(f => f.Klubas)
+                .Select(f => new
+                {
+                    f.FotoID,
+                    f.Pavadinimas,
+                    f.Aprasymas,
+                    f.Data,
+                    Narys = new
+                    {
+                        f.Narys.Vardas,
+                        f.Narys.Pavarde
+                    },
+                    Klubas = new
+                    {
+                        f.Klubas.Pavadinimas
+                    },
+                    f.FotoPath
+                })
+                .ToListAsync();
+        }
+
     }
 }

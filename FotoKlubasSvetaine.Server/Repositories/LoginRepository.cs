@@ -16,8 +16,22 @@ namespace FotoKlubasSvetaine.Server.Repositories
 
         public async Task<Narys> ValidateUserAsync(string username, string password)
         {
-            return await _context.Narys
+            Console.WriteLine($"Attempting login for: {username} / {password}");
+
+            var user = await _context.Narys
                 .FirstOrDefaultAsync(n => n.Username == username && n.Slap == password);
+
+            if (user == null)
+            {
+                Console.WriteLine("No matching user found.");
+            }
+            else
+            {
+                Console.WriteLine($"Found user: ID={user.NarysID}, Username={user.Username}");
+            }
+
+            return user;
         }
+
     }
 }

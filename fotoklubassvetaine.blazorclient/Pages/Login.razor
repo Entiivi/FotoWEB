@@ -1,7 +1,7 @@
 ﻿@page "/login"
 @inject HttpClient Http
 @inject NavigationManager Navigation
-@using Microsoft.Fast.Components.FluentUI
+@inject IJSRuntime JS
 
 
 <link rel="stylesheet" href="/css/loginblazor.css" />
@@ -51,7 +51,6 @@
 
 
 @code {
-    @code {
         private string username = "";
         private string password = "";
 
@@ -75,9 +74,17 @@
 
                 if (response.IsSuccessStatusCode)
                 {
-                    var result = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Login successful: {result}");
-                    Navigation.NavigateTo("/main");
+                    var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+
+                    if (result != null)
+                    {
+                        Console.WriteLine($"Login successful for {result.Username} (ID: {result.NarysID})");
+
+                        await JS.InvokeVoidAsync("localStorage.setItem", "username", result.Username);
+                        await JS.InvokeVoidAsync("localStorage.setItem", "narysId", result.NarysID.ToString());
+
+                        Navigation.NavigateTo("/main");
+                    }
                 }
                 else
                 {
@@ -89,7 +96,14 @@
                 Console.WriteLine($"Error during login: {ex.Message}");
             }
         }
-    }
+
+        private class LoginResponse
+        {
+            public int NarysID { get; set; }
+            public string Username { get; set; }
+            public string Message { get; set; }
+        }
+    
 
     private void Createanaccount() => Navigation.NavigateTo("https://localhost:7/create-account", forceLoad: true);
     private void LoginWithGoogle() => Navigation.NavigateTo("https://localhost:7001/login/google", forceLoad: true);

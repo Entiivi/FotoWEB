@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "xzQwbdd5UFtt7dTF0uv1Wm9fcbip1Gvx+RwYBqMWEYA=",
+  "Hash": "UfV3y1mtIVXcr/CgzKRyDwLszTvpmBO3IkLF/zPzgS0=",
   "Source": "FotoKlubasSvetaine.Server",
   "BasePath": "_content/FotoKlubasSvetaine.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj",
+      "Identity": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.client\\fotoklubassvetaine.client.esproj",
       "Version": 2,
       "Source": "fotoklubassvetaine.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",

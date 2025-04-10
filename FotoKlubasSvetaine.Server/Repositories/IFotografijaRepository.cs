@@ -7,9 +7,11 @@ namespace FotoKlubasSvetaine.Server.Repositories
     public interface IFotografijaRepository
     {
         Task<IEnumerable<Fotografija>> GetFotografijos();
-        Task<Fotografija> GetFotografija(int id);
+        Task<Fotografija?> GetFotografija(int id);
         Task AddFotografija(Fotografija fotografija);
         Task UpdateFotografija(Fotografija fotografija);
         Task DeleteFotografija(int id);
+        Task<Fotografija?> GetFotografijaByPavadinimas(string pavadinimas);
+        Task<IEnumerable<object>> GetFotoInfoForChatbot();
     }
 }

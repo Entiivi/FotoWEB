@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Antiforgery;
 using AspNet.Security.OAuth.GitHub;
 using Microsoft.Extensions.Logging;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure logging
@@ -141,13 +142,13 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAntiforgery();
-app.UseStaticFiles();
 logger.LogInformation("Middleware configured");
 
 // Swagger UI
@@ -164,6 +165,7 @@ app.MapFotografijaEndpoints();
 app.MapLoginEndpoints();
 app.MapUploadEndpoints();
 app.MapUserEndpoints();
+app.MapFallbackToFile("index.html");
 logger.LogInformation("API Endpoints mapped");
 
 // Static Files

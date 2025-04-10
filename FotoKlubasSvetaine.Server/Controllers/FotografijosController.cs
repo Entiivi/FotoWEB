@@ -1,5 +1,6 @@
 using FotoKlubasSvetaine.Server.Models;
 using FotoKlubasSvetaine.Server.Repositories;
+using FotoKlubasSvetaine.DTOs;
 
 namespace FotoKlubasSvetaine.Server.Controllers
 {
@@ -25,9 +26,29 @@ namespace FotoKlubasSvetaine.Server.Controllers
             .WithTags("Fotografija")
             .WithName("GetFotografijaById");
 
-            // Add a new Fotografija
-            endpoints.MapPost("/fotografija", async (Fotografija fotografija, IFotografijaRepository repository) =>
+            endpoints.MapGet("/fotografija/pavadinimas/{pavadinimas}", async (string pavadinimas, IFotografijaRepository repository) =>
             {
+                var photo = await repository.GetFotografijaByPavadinimas(pavadinimas);
+                return photo != null ? Results.Ok(photo) : Results.NotFound();
+            })
+            .WithTags("Fotografija")
+            .WithName("GetFotografijaByPavadinimas");
+
+            // Add a new Fotografija
+            endpoints.MapPost("/fotografija", async (FotografijaDto dto, IFotografijaRepository repository) =>
+            {
+                var filePath = await SaveBase64Image(dto.FotoData, dto.Pavadinimas);
+
+                var fotografija = new Fotografija
+                {
+                    Pavadinimas = dto.Pavadinimas,
+                    Aprasymas = dto.Aprasymas,
+                    Data = dto.Data,
+                    NarysID = dto.NarysID,
+                    KlubasID = dto.KlubasID,
+                    FotoPath = filePath
+                };
+
                 await repository.AddFotografija(fotografija);
                 return Results.Created($"/fotografija/{fotografija.FotoID}", fotografija);
             })
@@ -35,13 +56,22 @@ namespace FotoKlubasSvetaine.Server.Controllers
             .WithName("CreateFotografija");
 
             // Update an existing Fotografija
-            endpoints.MapPut("/fotografija/{id:int}", async (int id, Fotografija fotografija, IFotografijaRepository repository) =>
+            endpoints.MapPut("/fotografija/{id:int}", async (int id, FotografijaDto dto, IFotografijaRepository repository) =>
             {
-                if (id != fotografija.FotoID)
-                {
+                var existing = await repository.GetFotografija(id);
+                if (existing == null || id != dto.FotoID)
                     return Results.BadRequest();
-                }
-                await repository.UpdateFotografija(fotografija);
+
+                var filePath = await SaveBase64Image(dto.FotoData, dto.Pavadinimas);
+
+                existing.Pavadinimas = dto.Pavadinimas;
+                existing.Aprasymas = dto.Aprasymas;
+                existing.Data = dto.Data;
+                existing.NarysID = dto.NarysID;
+                existing.KlubasID = dto.KlubasID;
+                existing.FotoPath = filePath;
+
+                await repository.UpdateFotografija(existing);
                 return Results.NoContent();
             })
             .WithTags("Fotografija")
@@ -60,6 +90,38 @@ namespace FotoKlubasSvetaine.Server.Controllers
             })
             .WithTags("Fotografija")
             .WithName("DeleteFotografija");
+
+            // Get all Fotografija info for chatbot
+            endpoints.MapGet("/fotografija/info", async (IFotografijaRepository repository) =>
+            {
+                var enriched = await repository.GetFotoInfoForChatbot();
+                return Results.Ok(enriched);
+            })
+            .WithTags("Fotografija")
+            .WithName("GetAllFotoInfo");
+
+
         }
+
+        private static async Task<string> SaveBase64Image(string base64, string name)
+        {
+            if (string.IsNullOrWhiteSpace(base64))
+                throw new ArgumentException("FotoData is empty");
+
+            base64 = base64.Replace("data:image/png;base64,", "")
+                           .Replace("data:image/jpeg;base64,", "");
+
+            var bytes = Convert.FromBase64String(base64);
+            var safeName = name.Replace(" ", "_");
+            var fileName = $"{safeName}_{DateTime.Now.Ticks}.jpg";
+            var relativePath = Path.Combine("uploads", fileName);
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", relativePath);
+
+            Directory.CreateDirectory(Path.GetDirectoryName(fullPath)!);
+            await File.WriteAllBytesAsync(fullPath, bytes);
+
+            return relativePath.Replace("\\", "/"); // make sure path is web-safe
+        }
+
     }
 }

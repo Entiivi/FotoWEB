@@ -1,30 +1,67 @@
 ﻿@page "/photo/{Pavadinimas}"
 @inject HttpClient Http
-@using Microsoft.Fast.Components.FluentUI
+@inject NavigationManager Navigation
 
-<h3>@photoTitle</h3>
-<img src="@photoUrl" alt="@photoTitle" />
-<p>@photoDescription</p>
+<link rel="stylesheet" href="css/photo-details.css" />
 
 @code {
-    [Parameter] public string Id { get; set; }
+    [Parameter] public string Pavadinimas { get; set; }
 
-    private string photoTitle;
-    private string photoUrl;
-    private string photoDescription;
-
-    protected override async Task OnInitializedAsync()
-    {
-        var photo = await Http.GetFromJsonAsync<Photo>($"https://api.yourdomain.com/api/photos/{Id}");
-        photoTitle = photo.Title;
-        photoUrl = photo.Url;
-        photoDescription = photo.Description;
-    }
+    private string? photoTitle;
+    private string? photoUrl;
+    private string? photoDescription;
+    private bool loading = true;
+    private bool notFound = false;
 
     private class Photo
     {
-        public string Title { get; set; }
-        public string Url { get; set; }
-        public string Description { get; set; }
+        public string? Pavadinimas { get; set; }
+        public string? FotoPath { get; set; }
+        public string? Aprasymas { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var photo = await Http.GetFromJsonAsync<Photo>($"fotografija/pavadinimas/{Uri.EscapeDataString(Pavadinimas)}");
+            if (photo != null)
+            {
+                photoTitle = photo.Pavadinimas;
+                photoUrl = $"https://localhost:7001/{photo.FotoPath}";
+                photoDescription = photo.Aprasymas;
+            }
+            else
+            {
+                notFound = true;
+            }
+        }
+        catch
+        {
+            notFound = true;
+        }
+        finally
+        {
+            loading = false;
+        }
     }
 }
+
+    @if (loading)
+    {
+        <FluentProgressRing />
+    }
+    else if (notFound)
+    {
+        <FluentTypography Variant="Body1">Nuotrauka nerasta.</FluentTypography>
+    }
+    else
+    {
+        <div class="photo-details-container">
+            <FluentCard class="photo-card">
+                <FluentTypography Variant="Headline5" class="title-margin">@photoTitle</FluentTypography>
+                <img src="@photoUrl" alt="@photoTitle" class="photo-image" />
+                <FluentTypography Variant="Body1" class="description-margin">@photoDescription</FluentTypography>
+            </FluentCard>
+        </div>
+    }

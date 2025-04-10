@@ -1,17 +1,26 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager Navigation
-@using Microsoft.Fast.Components.FluentUI
+@inject IJSRuntime JS
 
 <FluentDesignSystemProvider>
     @if (!Navigation.Uri.Contains("/login"))
     {
         <div class="mainnav">
+            <div class="nav-buttons">
                 <FluentButton Appearance="Appearance.Accent" @onclick="NavigateTomain">Main</FluentButton>
                 <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToPhotos">Photos</FluentButton>
                 <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToEdit">Edit</FluentButton>
                 <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToUploadPhoto">Upload Photo</FluentButton>
                 <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToLoginAccount">Account</FluentButton>
-               
+                <FluentButton Appearance="Appearance.Accent" @onclick="NavigateToChatBot">ChatBot</FluentButton>
+            </div>
+
+            <div class="right-user-info">
+                @if (!string.IsNullOrEmpty(loggedInUser))
+                {
+                    <span class="user-label">Logged in as @loggedInUser</span>
+                }
+            </div>
         </div>
     }
 
@@ -49,8 +58,17 @@
 @code {
     private void NavigateToUploadPhoto() => Navigation.NavigateTo("/upload");
     private void NavigateToLoginAccount() => Navigation.NavigateTo("/account-info");
-    private void NavigateToEdit() => Navigation.NavigateTo("/editor");
+    private void NavigateToEdit() => Navigation.NavigateTo("/UserPhoto");
     private void NavigateToPhotos() => Navigation.NavigateTo("/photos");
     private void NavigateTomain() => Navigation.NavigateTo("/main");
     private void NavigateToContact() => Navigation.NavigateTo("/contact");
+    private void NavigateToChatBot() => Navigation.NavigateTo("/chatbot");
+
+        private string loggedInUser = "";
+
+        protected override async Task OnInitializedAsync()
+        {
+            loggedInUser = await JS.InvokeAsync<string>("localStorage.getItem", "username");
+        }
+    
 }

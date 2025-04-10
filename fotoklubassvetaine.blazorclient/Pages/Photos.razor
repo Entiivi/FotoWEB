@@ -1,7 +1,6 @@
 ﻿@page "/photos"
 @inject HttpClient Http
 @inject NavigationManager Navigation
-@using Microsoft.Fast.Components.FluentUI
 
 <link rel="stylesheet" href="css/photos.css" />
 
@@ -71,13 +70,14 @@
 
     private void HandlePhotoClick(Photo photo)
     {
-        Navigation.NavigateTo($"/photo-details/{photo.Pavadinimas}");
+        Navigation.NavigateTo($"/photo/{photo.Pavadinimas}");
     }
 
     private class Photo
     {
         public int FotoID { get; set; }
         public string? Pavadinimas { get; set; }
+        public string? Aprasymas { get; set; }
         public string? FotoPath { get; set; }
     }
 }

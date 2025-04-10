@@ -1,91 +1,103 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\scopedcss\\bundle\\fotoklubassvetaine.blazorclient.styles.css",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\obj\\Debug\\net8.0\\scopedcss\\bundle\\fotoklubassvetaine.blazorclient.styles.css",
       "PackagePath": "staticwebassets\\fotoklubassvetaine.blazorclient.styles.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\ChatBot.css",
+      "PackagePath": "staticwebassets\\css\\ChatBot.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\fonts\\DMSerifText-Italic.ttf",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\edit.css",
+      "PackagePath": "staticwebassets\\css\\edit.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\fonts\\DMSerifText-Italic.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\DMSerifText-Italic.ttf"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\fonts\\DMSerifText-Regular.ttf",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\fonts\\DMSerifText-Regular.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\DMSerifText-Regular.ttf"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\fonts\\PixelifySans-Regular.ttf",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\fonts\\PixelifySans-Regular.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\PixelifySans-Regular.ttf"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\loginblazor.css",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\loginblazor.css",
       "PackagePath": "staticwebassets\\css\\loginblazor.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\mainblazor.css",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\mainblazor.css",
       "PackagePath": "staticwebassets\\css\\mainblazor.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\photos.css",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\photo-details.css",
+      "PackagePath": "staticwebassets\\css\\photo-details.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\photos.css",
       "PackagePath": "staticwebassets\\css\\photos.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\github.svg",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\github.svg",
       "PackagePath": "staticwebassets\\images\\github.svg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\google.svg",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\google.svg",
       "PackagePath": "staticwebassets\\images\\google.svg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\logindivimage.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\logindivimage.jpg",
       "PackagePath": "staticwebassets\\images\\logindivimage.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\mainimage1.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\mainimage1.jpg",
       "PackagePath": "staticwebassets\\images\\mainimage1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\mainimage2.JPG",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\images\\mainimage2.JPG",
       "PackagePath": "staticwebassets\\images\\mainimage2.JPG"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\index.html",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\sample-data\\weather.json",
+      "Id": "C:\\Users\\User\\Desktop\\mok\\FotoWEB\\fotoklubassvetaine.blazorclient\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

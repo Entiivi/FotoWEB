@@ -1,0 +1,75 @@
+﻿@page "/UserPhoto"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+
+<link rel="stylesheet" href="css/edit.css" />
+
+<h3>Mano nuotraukos</h3>
+
+@if (loading)
+{
+    <p>Kraunama...</p>
+}
+else if (userPhotos.Count == 0)
+{
+    <p>Neturite įkeltų nuotraukų.</p>
+}
+else
+{
+    <div class="photo-grid">
+        @foreach (var photo in userPhotos)
+        {
+            <div class="photo-box">
+                <img src="@($"https://localhost:7001/{photo.FotoPath.Replace("\\", "/")}")"
+                     alt="@photo.Pavadinimas"
+                     class="thumbnail" />
+                <button class="edit-button" @onclick="() => NavigateToEditor(photo.Pavadinimas)">Redaguoti</button>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<FotografijaDto> userPhotos = new();
+    private bool loading = true;
+    private int currentUserId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var idString = await JS.InvokeAsync<string>("localStorage.getItem", "narysId");
+
+        if (!int.TryParse(idString, out currentUserId))
+        {
+            // Redirect to login if user ID is not found
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        var response = await Http.GetFromJsonAsync<List<FotografijaDto>>($"fotografija?narysId={currentUserId}");
+        if (response != null)
+        {
+            userPhotos = response;
+        }
+
+        loading = false;
+    }
+
+    private void NavigateToEditor(string pavadinimas)
+    {
+        var encoded = Uri.EscapeDataString(pavadinimas);
+        Navigation.NavigateTo($"/photo-editor/{encoded}");
+    }
+
+    private class FotografijaDto
+    {
+        public int FotoID { get; set; }
+        public string Pavadinimas { get; set; }
+        public string Aprasymas { get; set; }
+        public string Data { get; set; }
+        public int NarysID { get; set; }
+        public int KlubasID { get; set; }
+        public string FotoData { get; set; }
+        public string FotoPath { get; set; }
+    }
+}

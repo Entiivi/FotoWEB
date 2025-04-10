@@ -1,0 +1,29 @@
+﻿.photo-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 24px;
+    gap: 16px;
+}
+
+.photo-card {
+    padding: 24px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.photo-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.title-margin {
+    margin-top: 16px;
+}
+
+.description-margin {
+    margin-top: 8px;
+}

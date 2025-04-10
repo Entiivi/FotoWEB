@@ -20,17 +20,31 @@ fluent-card{
     border: none;
 }
 
-/* Main navigation card styling */
 .mainnav {
-    padding: 50px 0;
-    background-color: #2C253B;
-    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1vw;
     margin: 1vw;
-    align-content: center;
+    background-color: #2C253B;
+    border-radius: 16px;
     position: sticky;
     top: 0;
-    z-index: 1000
+    z-index: 1000;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.right-user-info {
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.user-label {
+    white-space: nowrap;
 }
 
 /* Ensure the button container takes full width */

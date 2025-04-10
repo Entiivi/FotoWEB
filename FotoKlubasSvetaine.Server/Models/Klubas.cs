@@ -1,5 +1,8 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace FotoKlubasSvetaine.Server.Models
 {
+    [Table("klubas")]
     public class Klubas
     {
         public int KlubasID { get; set; }

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication;
+using FotoKlubasSvetaine.Server.Dtos;
 
 public static class LoginEndpoints
 {
@@ -8,19 +9,31 @@ public static class LoginEndpoints
         // Login endpoint
         endpoints.MapPost("/login", async (LoginModel model, ILoginRepository loginRepository) =>
         {
+            Console.WriteLine($"?? Login attempt for {model.Username}");
+
             var user = await loginRepository.ValidateUserAsync(model.Username, model.Password);
+
             if (user != null)
             {
-                return Results.Ok(new { Message = "Login successful" });
+                var result = new LoginResponse
+                {
+                    NarysID = user.NarysID,
+                    Username = user.Username,
+                    Message = "Login successful"
+                };
+
+                Console.WriteLine($"? Login success ? {result.Username} (ID: {result.NarysID})");
+                return Results.Ok(result);
             }
 
+            Console.WriteLine("? Login failed: Invalid credentials.");
             return Results.Json(
                 new { Message = "Invalid credentials" },
                 statusCode: StatusCodes.Status401Unauthorized
             );
         })
-        .WithTags("Login") // Swagger tag for grouping
-        .WithName("Login"); // Operation ID for Swagger
+        .WithTags("Login")
+        .WithName("Login");
 
         // Google Login Endpoint
         endpoints.MapGet("/login/google", async (HttpContext context) =>

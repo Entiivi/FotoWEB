@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FotoKlubasSvetaine.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b19b8a7eaf84d0e38c19e5489360cf28dcc00a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a75227c61b7922caf0dee10fbc52aa6e6aa91817")]
 [assembly: System.Reflection.AssemblyProductAttribute("FotoKlubasSvetaine.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FotoKlubasSvetaine.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

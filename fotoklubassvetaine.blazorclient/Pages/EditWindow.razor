@@ -1,0 +1,114 @@
+﻿@page "/photo-editor/{Pavadinimas}"
+@inject HttpClient Http
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
+
+<h3>Nuotraukos redagavimas</h3>
+<div id="editor-container" style="height: 600px; margin-bottom: 20px;"></div>
+
+@if (editorReady)
+{
+    <button @onclick="TriggerSave">Išsaugoti</button>
+    <button @onclick="TriggerSaveAsCopy">Išsaugoti kaip kopiją</button>
+}
+
+@code {
+    [Parameter] public string Pavadinimas { get; set; } = "";
+
+    private FotografijaDto? selectedPhoto;
+    private string? editedBase64Image;
+    private bool editorReady = false;
+    private bool _editorLoaded = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !_editorLoaded)
+        {
+            var encodedName = Uri.EscapeDataString(Pavadinimas);
+            selectedPhoto = await Http.GetFromJsonAsync<FotografijaDto>($"fotografija/pavadinimas/{encodedName}");
+
+            if (selectedPhoto != null && !string.IsNullOrEmpty(selectedPhoto.FotoPath))
+            {
+                var url = $"https://localhost:7001/{selectedPhoto.FotoPath.Replace("\\", "/")}";
+                Console.WriteLine("📸 Image URL: " + url);
+
+                await JS.InvokeVoidAsync("openEditor", url, DotNetObjectReference.Create(this));
+                _editorLoaded = true;
+            }
+            else
+            {
+                Console.WriteLine("❌ Failed to load photo by name.");
+            }
+
+            StateHasChanged();
+        }
+    }
+
+    [JSInvokable]
+    public void OnImageEdited(string base64)
+    {
+        Console.WriteLine("✅ Received edited image from JS.");
+        editedBase64Image = base64;
+        editorReady = true;
+        StateHasChanged();
+    }
+
+    private async Task TriggerSave()
+    {
+        await JS.InvokeVoidAsync("saveImage");
+        await Task.Delay(100); // Laikas JS pusėje apdoroti
+        await SaveChanges();
+    }
+
+    private async Task TriggerSaveAsCopy()
+    {
+        await JS.InvokeVoidAsync("saveImage");
+        await Task.Delay(100);
+        await SaveAsCopy();
+    }
+
+    private async Task SaveChanges()
+    {
+        if (selectedPhoto == null || string.IsNullOrWhiteSpace(editedBase64Image)) return;
+
+        var dto = selectedPhoto with
+            {
+                FotoData = editedBase64Image,
+                Data = DateTime.Now.ToString("yyyy-MM-dd")
+            };
+
+        await Http.PutAsJsonAsync($"fotografija/{dto.FotoID}", dto);
+        Navigation.NavigateTo("/edit-my-photos");
+    }
+
+    private async Task SaveAsCopy()
+    {
+        if (selectedPhoto == null || string.IsNullOrWhiteSpace(editedBase64Image)) return;
+
+        var dto = new FotografijaDto
+            {
+                FotoID = 0,
+                Pavadinimas = selectedPhoto.Pavadinimas + " (kopija)",
+                Aprasymas = selectedPhoto.Aprasymas,
+                Data = DateTime.Now.ToString("yyyy-MM-dd"),
+                NarysID = selectedPhoto.NarysID,
+                KlubasID = selectedPhoto.KlubasID,
+                FotoData = editedBase64Image
+            };
+
+        await Http.PostAsJsonAsync("fotografija", dto);
+        Navigation.NavigateTo("/edit-my-photos");
+    }
+
+    public record FotografijaDto
+    {
+        public int FotoID { get; set; }
+        public string Pavadinimas { get; set; }
+        public string Aprasymas { get; set; }
+        public string Data { get; set; }
+        public int NarysID { get; set; }
+        public int KlubasID { get; set; }
+        public string FotoData { get; set; }
+        public string FotoPath { get; set; }
+    }
+}

@@ -11,7 +11,7 @@ const LoginForm = ({ onLogin }) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://localhost:7295/login', {
+            const response = await fetch('https://localhost:7001/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,12 +34,12 @@ const LoginForm = ({ onLogin }) => {
 
     const handleGoogleLogin = () => {
         // Redirect to your backend Google login endpoint
-        window.location.href = 'https://localhost:7295/login/google'; // Update with your backend's Google login URL
+        window.location.href = 'https://localhost:7001/login/google'; // Update with your backend's Google login URL
     };
 
     const handleGitHubLogin = () => {
         // Redirect to your backend GitHub login endpoint
-        window.location.href = 'https://localhost:7295/login/github'; // Update with your backend's GitHub login URL
+        window.location.href = 'https://localhost:7001/login/github'; // Update with your backend's GitHub login URL
     };
 
     return (
