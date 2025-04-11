@@ -36,7 +36,6 @@ if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Updated configuration with ports
 export default defineConfig({
     plugins: [react()],
     resolve: {
@@ -45,21 +44,28 @@ export default defineConfig({
         }
     },
     server: {
-        port: 5173, // React frontend (HTTP)
+        host: 'localhost',  // Forces the server to bind to "localhost"
+        port: 5173,
         https: {
             key: fs.readFileSync(keyFilePath),
             cert: fs.readFileSync(certFilePath),
         },
         proxy: {
+            '/login': {
+                target: 'https://localhost:7001',
+                changeOrigin: true,
+                secure: false
+            },
             '/api': {
-                target: 'https://localhost:7001', // .NET API HTTPS port
+                target: 'https://localhost:7001',
                 changeOrigin: true,
                 secure: false
             }
         }
     },
     preview: {
-        port: 5174, // React frontend (HTTPS)
+        host: 'localhost',  // Also sets the preview server to use "localhost"
+        port: 5173,
         https: {
             key: fs.readFileSync(keyFilePath),
             cert: fs.readFileSync(certFilePath),

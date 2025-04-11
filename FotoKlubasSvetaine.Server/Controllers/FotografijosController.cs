@@ -1,6 +1,9 @@
 using FotoKlubasSvetaine.Server.Models;
 using FotoKlubasSvetaine.Server.Repositories;
 using FotoKlubasSvetaine.DTOs;
+using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace FotoKlubasSvetaine.Server.Controllers
 {
@@ -52,6 +55,7 @@ namespace FotoKlubasSvetaine.Server.Controllers
                 await repository.AddFotografija(fotografija);
                 return Results.Created($"/fotografija/{fotografija.FotoID}", fotografija);
             })
+            .WithMetadata(new Microsoft.AspNetCore.Mvc.IgnoreAntiforgeryTokenAttribute())
             .WithTags("Fotografija")
             .WithName("CreateFotografija");
 
@@ -100,8 +104,9 @@ namespace FotoKlubasSvetaine.Server.Controllers
             .WithTags("Fotografija")
             .WithName("GetAllFotoInfo");
 
-
         }
+
+
 
         private static async Task<string> SaveBase64Image(string base64, string name)
         {

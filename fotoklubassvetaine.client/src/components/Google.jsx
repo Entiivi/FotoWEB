@@ -2,7 +2,7 @@ import React from 'react';
 
 function GoogleLoginButton() {
     const handleLogin = () => {
-        window.location.href = "https://localhost:5173/signin-oidc"; // Replace with your backend URL
+        window.location.href = "https://localhost:5174/signin-oidc"; // Replace with your backend URL
     };
 
     return (

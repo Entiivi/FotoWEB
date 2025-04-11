@@ -2,7 +2,7 @@ import React from 'react';
 
 function GitHubLoginButton() {
     const handleLogin = () => {
-        window.location.href = 'https://localhost:7295/login/github';
+        window.location.href = 'https://localhost:7001/login/github';
     };
 
     return (

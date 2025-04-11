@@ -22,8 +22,8 @@ const LoginForm = ({ onLogin }) => {
             if (response.ok) {
                 const data = await response.json();
                 console.log('Login successful:', data);
-                onLogin(username, password); // Pass username and password to the handler
-                navigate('/main'); // Redirect to MainForm page
+                onLogin(data.username, data.narysID);
+                navigate('/main');
             } else {
                 console.error('Login failed');
             }

@@ -2,20 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './css/UploadPhoto.css';
 
-const fetchAntiForgeryToken = async () => {
-    try {
-        const response = await fetch('https://localhost:7295/antiforgery-token', {
-            credentials: 'include', // Ensures cookies are included
-        });
-        const data = await response.json();
-        return data.token; // Return the anti-forgery token
-    } catch (error) {
-        console.error('Failed to fetch anti-forgery token:', error);
-        throw error;
-    }
-};
-
-
 const UploadPhoto = ({ username }) => {
     const [photo, setPhoto] = useState(null);
     const [photoPreview, setPhotoPreview] = useState(null);
@@ -30,7 +16,7 @@ const UploadPhoto = ({ username }) => {
     useEffect(() => {
         const fetchUserInfo = async () => {
             try {
-                const response = await fetch(`https://localhost:7295/user/userinfo?username=${username}`);
+                const response = await fetch(`https://localhost:7001/user/userinfo?username=${username}`);
                 if (response.ok) {
                     const data = await response.json();
                     setNarysID(data.narysID);
@@ -58,13 +44,7 @@ const UploadPhoto = ({ username }) => {
             return;
         }
 
-        const minSize = 5 * 1024 * 1024; // 30MB
         const maxSize = 50 * 1024 * 1024; // 50MB
-
-        if (file.size < minSize) {
-            setError('File size must be at least 30MB.');
-            return;
-        }
 
         if (file.size > maxSize) {
             setError('File size must be less than 50MB.');
@@ -86,7 +66,6 @@ const UploadPhoto = ({ username }) => {
     };
 
     const handleUpload = async () => {
-        const token = await fetchAntiForgeryToken();
         if (!pavadinimas || !aprasymas || !photo) {
             setError('All fields are required.');
             return;
@@ -104,11 +83,8 @@ const UploadPhoto = ({ username }) => {
         formData.append('klubasID', klubasID);
 
         try {
-            const response = await fetch('https://localhost:7295/upload', {
+            const response = await fetch('https://localhost:7001/upload', {
                 method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': token, // Include the anti-forgery token
-                },
                 body: formData,
                 credentials: 'include',
             });

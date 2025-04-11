@@ -1,6 +1,5 @@
 using FotoKlubasSvetaine.Server.Data;
 using FotoKlubasSvetaine.Server.Models;
-using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Mvc;
 
 public static class UploadEndpoints
@@ -15,12 +14,8 @@ public static class UploadEndpoints
             [FromForm] int klubasID,
             IWebHostEnvironment env,
             ApplicationDbContext context,
-            [FromServices] IAntiforgery antiforgery,
             HttpContext httpContext) =>
         {
-            // Validate the anti-forgery token
-            await antiforgery.ValidateRequestAsync(httpContext);
-
             if (photo == null || photo.Length == 0)
             {
                 return Results.BadRequest(new { Message = "No file uploaded." });
@@ -59,6 +54,9 @@ public static class UploadEndpoints
             await context.SaveChangesAsync();
 
             return Results.Ok(new { Message = "Photo uploaded successfully.", Path = fotografija.FotoPath });
-        });
+        })
+        .WithMetadata(new Microsoft.AspNetCore.Mvc.IgnoreAntiforgeryTokenAttribute())
+        .WithTags("Fotografija")
+        .WithName("UploadFotografija");
     }
 }

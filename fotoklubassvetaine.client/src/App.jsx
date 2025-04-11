@@ -21,41 +21,59 @@ function ThemeToggle() {
         localStorage.setItem('theme', theme);
     }, [theme]);
 
-    /* theme*/
+    // Only show the toggle on the '/main' page
+    if (location.pathname !== '/main') return null;
+
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };
 
-    // Mygtukas rodomas tik jei vartotojas yra "/main" puslapyje
-    if (location.pathname !== '/main') return null;
-
-    /* theme*/
     return (
         <button onClick={toggleTheme} className="theme-toggle">
             {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
         </button>
     );
 }
-/* Chatbot*/
+
 function ChatBotWrapper() {
     const location = useLocation();
+    // Only show the ChatBot on the '/main' page
     if (location.pathname !== '/main') return null;
     return <ChatBot />;
 }
 
 function App() {
+    // Create a state to store logged-in user info
+    const [user, setUser] = useState(null);
+
+    // Update the login handler to store the username and user id (narysID)
+    const handleLogin = (username, narysID) => {
+        console.log('User logged in:', username);
+        setUser({ username, narysID });
+    };
+
     return (
         <Router>
             <div className="app-container">
                 <ThemeToggle />
-                <ChatBotWrapper /> {/* Chatbotas rodomas tik "/main" puslapyje */}
+                <ChatBotWrapper /> {/* Chatbot is only shown on '/main' */}
                 <Routes>
-                    <Route path="/login" element={<LoginForm />} />
+                    {/* Pass the required onLogin prop to LoginForm */}
+                    <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
                     <Route path="/main" element={<MainForm />} />
                     <Route path="/photo-preview" element={<PhotoPreview />} />
-                    <Route path="/upload-photo" element={<UploadPhoto />} />
-                    <Route path="/personal-info" element={<PersonalInfo />} />
-                    <Route path="/login-info" element={<LoginInformation />} />
+                    <Route path="/upload-photo" element={<UploadPhoto username = { user? user.username : ''} />}/>
+                    {/* Pass the username as a prop to PersonalInfo */}
+                    <Route path="/personal-info" element={<PersonalInfo username={user ? user.username : ''} />} />
+                    <Route
+                        path="/login-info"
+                        element={
+                            <LoginInformation
+                                userId={user ? user.narysID : ''}
+                                username={user ? user.username : ''}
+                            />
+                        }
+                    />
                     <Route path="/create-account" element={<CreateAccount />} />
                     <Route path="/photo-details" element={<PhotoDetails />} />
                     <Route path="*" element={<Navigate to="/login" />} />

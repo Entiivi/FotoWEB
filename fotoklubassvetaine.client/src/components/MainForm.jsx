@@ -11,7 +11,7 @@ function MainForm() {
     useEffect(() => {
         const fetchPhotos = async () => {
             try {
-                const response = await fetch("https://localhost:7295/fotografija");
+                const response = await fetch("https://localhost:7001/fotografija");
                 if (response.ok) {
                     const data = await response.json();
                     setPhotos(data);
@@ -82,7 +82,7 @@ function MainForm() {
                                     onClick={() => handlePhotoClick(photo)}
                                 >
                                     <img
-                                        src={`https://localhost:7295/${photo.fotoPath}`}
+                                        src={`https://localhost:7001/${photo.fotoPath}`}
                                         alt={photo.pavadinimas}
                                         style={{ width: "100%", height: "200px", objectFit: "cover" }}
                                     />

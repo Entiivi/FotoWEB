@@ -27,7 +27,7 @@ function CreateAccount() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://localhost:7295/user/create', {
+            const response = await fetch('https://localhost:7001/user/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

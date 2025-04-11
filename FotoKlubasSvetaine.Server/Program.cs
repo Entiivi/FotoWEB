@@ -6,8 +6,6 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Antiforgery;
 using AspNet.Security.OAuth.GitHub;
 using Microsoft.Extensions.Logging;
 
@@ -70,17 +68,6 @@ logger.LogInformation("Database connection established");
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<IFotografijaRepository, FotografijaRepository>();
 
-// Controllers and Razor Pages
-builder.Services.AddControllers(options =>
-{
-    options.Filters.Add(new IgnoreAntiforgeryTokenAttribute());
-});
-builder.Services.AddRazorPages(options =>
-{
-    options.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
-});
-logger.LogInformation("Controllers and Razor Pages configured");
-
 // CORS Configuration
 builder.Services.AddCors(options =>
 {
@@ -89,7 +76,7 @@ builder.Services.AddCors(options =>
         corsBuilder.WithOrigins(
             "https://localhost:5173",    // React HTTPS
             "https://localhost:7281",    // Razor HTTPS
-            "http://localhost:5173",     // React HTTP
+            "http://localhost:5174",     // React HTTP
             "http://localhost:5281"      // Razor HTTP
         )
         .AllowAnyHeader()
@@ -147,8 +134,6 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
-app.UseAuthorization();
-app.UseAntiforgery();
 logger.LogInformation("Middleware configured");
 
 // Swagger UI

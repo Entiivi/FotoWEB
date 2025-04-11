@@ -8,7 +8,7 @@ const PhotoDetails = () => {
 
     return (
         <div className="photo-details-container">
-            <img src={`https://localhost:7295/${fotoPath}`} alt={pavadinimas} />
+            <img src={`https://localhost:7001/${fotoPath}`} alt={pavadinimas} />
             <h2>{pavadinimas}</h2>
             <p>{aprasymas}</p>
         </div>
