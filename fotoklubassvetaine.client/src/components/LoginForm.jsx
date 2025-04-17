@@ -44,8 +44,8 @@ const LoginForm = ({ onLogin }) => {
 
     return (
         <div className="login-form-wrapper">
+            <img src="Logo.png" alt="Logo" />
             <div className="login-form-container">
-                <img src="Logo.png" alt="Logo" />
                 <form onSubmit={handleLogin}>
                     <div>
                         <label>Username</label>
@@ -67,9 +67,11 @@ const LoginForm = ({ onLogin }) => {
                         Login with Google
                     </button>
                 </div>
-                <button onClick={handleGitHubLogin} className="github-login-button">
-                    Login with GitHub
-                </button>
+                <div className="github-login-container">
+                    <button onClick={handleGitHubLogin} className="github-login-button">
+                        Login with GitHub
+                    </button>
+                </div>
             </div>
         </div>
     );
