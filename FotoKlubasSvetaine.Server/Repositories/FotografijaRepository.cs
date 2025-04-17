@@ -25,7 +25,9 @@ namespace FotoKlubasSvetaine.Server.Repositories
 
         public async Task<Fotografija> GetFotografija(int id)
         {
-            return await _context.Fotografija.FindAsync(id);
+            // Explicitly filter on FotoID
+            return await _context.Fotografija
+                                 .FirstOrDefaultAsync(f => f.FotoID == id);
         }
 
         public async Task AddFotografija(Fotografija fotografija)
@@ -42,9 +44,12 @@ namespace FotoKlubasSvetaine.Server.Repositories
 
         public async Task DeleteFotografija(int id)
         {
-            var fotografija = await _context.Fotografija.FindAsync(id);
-            _context.Fotografija.Remove(fotografija);
-            await _context.SaveChangesAsync();
+            var foto = await GetFotografija(id);
+            if (foto != null)
+            {
+                _context.Fotografija.Remove(foto);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<Fotografija?> GetFotografijaByPavadinimas(string pavadinimas)
