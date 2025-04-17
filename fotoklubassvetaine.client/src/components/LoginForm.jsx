@@ -44,7 +44,7 @@ const LoginForm = ({ onLogin }) => {
 
     return (
         <div className="login-form-wrapper">
-            <img src="Logo.png" alt="Logo" />
+            <img className="wrapper-logo" src="Logo.JPG" alt="Logo" />
             <div className="login-form-container">
                 <form onSubmit={handleLogin}>
                     <div>
@@ -56,8 +56,8 @@ const LoginForm = ({ onLogin }) => {
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="button-container">
-                        <button type="submit">Login</button>
-                        <button type="button" className="create-account" onClick={() => navigate('/create-account')}>
+                        <button type="submit" className="login-button">Login</button>
+                        <button type="button" className="create-account-button" onClick={() => navigate('/create-account')}>
                             Create an account
                         </button>
                     </div>
@@ -73,6 +73,7 @@ const LoginForm = ({ onLogin }) => {
                     </button>
                 </div>
             </div>
+
         </div>
     );
 };

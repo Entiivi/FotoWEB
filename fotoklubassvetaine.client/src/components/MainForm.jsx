@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Box, Grid, Paper, Typography, CircularProgress } from "@mui/material";
+import { Button, Typography, CircularProgress } from "@mui/material";
+import "./css/MainForm.css";
 import "./css/PhotoList.css";
 
 function MainForm() {
@@ -24,7 +25,6 @@ function MainForm() {
                 setLoading(false);
             }
         };
-
         fetchPhotos();
     }, []);
 
@@ -33,66 +33,61 @@ function MainForm() {
     };
 
     return (
-        <Box sx={{ display: "flex", minHeight: "100vh", backgroundColor: "#f5f5f5", padding: 2 }}>
+        <div className="main-form-wrapper">
             {/* Sidebar */}
-            <Box
-                sx={{
-                    width: "20%",
-                    padding: 3,
-                    backgroundColor: "#e0e0e0",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 2,
-                    boxShadow: 2,
-                }}
-            >
-                <Button variant="contained" color="primary" onClick={() => navigate("/upload-photo")}>
+            <div className="sidebar1">
+                <Button className="side-button"
+                    variant="contained"
+                    color="primary"
+                    onClick={() => navigate("/upload-photo")}
+                >
                     Upload Photo
                 </Button>
-                <Button variant="contained" color="secondary" onClick={() => navigate("/login-info")}>
+                <Button className="side-button"
+                    variant="contained"
+                    color="secondary"
+                    onClick={() => navigate("/login-info")}
+                >
                     Login Information
                 </Button>
-                <Button variant="contained" color="success" onClick={() => navigate("/personal-info")}>
+                <Button className="side-button"
+                    variant="contained"
+                    color="success"
+                    onClick={() => navigate("/personal-info")}
+                >
                     Personal Information
                 </Button>
-            </Box>
+            </div>
 
             {/* Photo Gallery */}
-            <Box sx={{ flexGrow: 1, padding: 4 }}>
+            <section className="photo-gallery">
                 {loading ? (
-                    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
+                    <div className="loading-container">
                         <CircularProgress />
-                    </Box>
+                    </div>
                 ) : photos.length === 0 ? (
-                    <Typography variant="h6" align="center" color="textSecondary">
+                    <Typography variant="h6" className="no-photos-text">
                         No photos available.
                     </Typography>
                 ) : (
-                    <Grid container spacing={2}>
+                    <div className="grid-container">
                         {photos.map((photo) => (
-                            <Grid item xs={12} sm={6} md={4} key={photo.fotoID}>
-                                <Paper
-                                    elevation={3}
-                                    sx={{
-                                        overflow: "hidden",
-                                        borderRadius: "8px",
-                                        cursor: "pointer",
-                                        "&:hover img": { transform: "scale(1.05)", transition: "0.3s" },
-                                    }}
-                                    onClick={() => handlePhotoClick(photo)}
-                                >
-                                    <img
-                                        src={`https://localhost:7001/${photo.fotoPath}`}
-                                        alt={photo.pavadinimas}
-                                        style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                                    />
-                                </Paper>
-                            </Grid>
+                            <div
+                                key={photo.fotoID}
+                                className="photo-card"
+                                onClick={() => handlePhotoClick(photo)}
+                            >
+                                <img
+                                    src={`https://localhost:7001/${photo.fotoPath}`}
+                                    alt={photo.pavadinimas}
+                                    className="photo-image"
+                                />
+                            </div>
                         ))}
-                    </Grid>
+                    </div>
                 )}
-            </Box>
-        </Box>
+            </section>
+        </div>
     );
 }
 

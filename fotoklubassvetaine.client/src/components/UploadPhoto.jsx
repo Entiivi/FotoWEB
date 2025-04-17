@@ -111,8 +111,9 @@ const UploadPhoto = ({ username }) => {
     };
 
     return (
+     <div className="upload-photo-page">
         <div className="upload-photo-container">
-            <h2>Upload Photo</h2>
+                <h2 style={{ color: "#453750" }}>Upload Photo</h2>
             <div className="upload-warning">
                 <p>Please upload a .jpg format photo</p>
             </div>
@@ -123,8 +124,8 @@ const UploadPhoto = ({ username }) => {
             <div className="form-container">
                 <div className="left-column">
                     <div className="input-container">
-                        <label htmlFor="pavadinimas">Name:</label>
-                        <input
+                            <label htmlFor="pavadinimas" style={{ color: "#453750" }}>Name:</label>
+                        <input className="name-area"
                             type="text"
                             id="pavadinimas"
                             value={pavadinimas}
@@ -132,8 +133,8 @@ const UploadPhoto = ({ username }) => {
                         />
                     </div>
                     <div className="input-container">
-                        <label htmlFor="aprasymas">About:</label>
-                        <textarea
+                            <label htmlFor="aprasymas" style={{ color: "#453750" }}>About:</label>
+                        <textarea className="about-area"
                             id="aprasymas"
                             value={aprasymas}
                             rows="4"
@@ -144,7 +145,7 @@ const UploadPhoto = ({ username }) => {
 
                 <div className="right-column">
                     <div className="input-container">
-                        <label htmlFor="photo">Photo:</label>
+                            <label htmlFor="photo" style={{ color: "#453750" }}>Photo:</label>
                         <input
                             type="file"
                             id="photo"
@@ -153,14 +154,15 @@ const UploadPhoto = ({ username }) => {
                         />
                     </div>
                     <div className="button-container">
-                        <button onClick={handleUpload} disabled={loading}>
+                        <button className="upload-button" onClick={handleUpload} disabled={loading}>
                             {loading ? 'Uploading...' : 'Upload'}
                         </button>
                     </div>
                     <div className="photo-preview">
-                        {photoPreview ? <img src={photoPreview} alt="Preview" /> : <span>.JPG</span>}
+                            {photoPreview ? <img src={photoPreview} alt="Preview" /> : <span style={{ color: "#453750" }}>.JPG</span>}
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );

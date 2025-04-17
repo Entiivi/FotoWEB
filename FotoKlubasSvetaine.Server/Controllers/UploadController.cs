@@ -55,7 +55,7 @@ public static class UploadEndpoints
 
             return Results.Ok(new { Message = "Photo uploaded successfully.", Path = fotografija.FotoPath });
         })
-        .WithMetadata(new Microsoft.AspNetCore.Mvc.IgnoreAntiforgeryTokenAttribute())
+        .DisableAntiforgery()
         .WithTags("Fotografija")
         .WithName("UploadFotografija");
     }

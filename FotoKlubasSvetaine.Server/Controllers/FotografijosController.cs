@@ -55,7 +55,7 @@ namespace FotoKlubasSvetaine.Server.Controllers
                 await repository.AddFotografija(fotografija);
                 return Results.Created($"/fotografija/{fotografija.FotoID}", fotografija);
             })
-            .WithMetadata(new Microsoft.AspNetCore.Mvc.IgnoreAntiforgeryTokenAttribute())
+            .DisableAntiforgery()
             .WithTags("Fotografija")
             .WithName("CreateFotografija");
 
